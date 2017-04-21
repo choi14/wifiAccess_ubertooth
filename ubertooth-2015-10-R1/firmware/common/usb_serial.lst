@@ -1,0 +1,1479 @@
+ARM GAS  /tmp/ccMH51UR.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"usb_serial.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.data
+  19              		.align	2
+  22              	iap_entry:
+  23 0000 F11FFF1F 		.word	536813553
+  24              		.align	2
+  27              	LineCoding:
+  28 0004 00C20100 		.word	115200
+  29 0008 00       		.byte	0
+  30 0009 00       		.byte	0
+  31 000a 08       		.byte	8
+  32 000b 00       		.space	1
+  33              		.bss
+  34              		.align	2
+  35              	abBulkBuf:
+  36 0000 00000000 		.space	64
+  36      00000000 
+  36      00000000 
+  36      00000000 
+  36      00000000 
+  37              		.align	2
+  38              	abClassReqData:
+  39 0040 00000000 		.space	8
+  39      00000000 
+  40              		.align	2
+  41              	fBulkInBusy:
+  42 0048 00000000 		.space	4
+  43              		.align	2
+  44              	fChainDone:
+  45 004c 00000000 		.space	4
+  46              		.align	2
+  47              	txdata:
+  48 0050 00000000 		.space	128
+  48      00000000 
+  48      00000000 
+  48      00000000 
+  48      00000000 
+  49              		.align	2
+  50              	rxdata:
+  51 00d0 00000000 		.space	128
+  51      00000000 
+ARM GAS  /tmp/ccMH51UR.s 			page 2
+
+
+  51      00000000 
+  51      00000000 
+  51      00000000 
+  52              		.align	2
+  53              	txfifo:
+  54 0150 00000000 		.space	12
+  54      00000000 
+  54      00000000 
+  55              		.align	2
+  56              	rxfifo:
+  57 015c 00000000 		.space	12
+  57      00000000 
+  57      00000000 
+  58              		.section	.rodata
+  59              		.align	2
+  62              	abDescriptors:
+  63 0000 12       		.byte	18
+  64 0001 01       		.byte	1
+  65 0002 01       		.byte	1
+  66 0003 01       		.byte	1
+  67 0004 02       		.byte	2
+  68 0005 00       		.byte	0
+  69 0006 00       		.byte	0
+  70 0007 40       		.byte	64
+  71 0008 FF       		.byte	-1
+  72 0009 FF       		.byte	-1
+  73 000a 05       		.byte	5
+  74 000b 00       		.byte	0
+  75 000c 00       		.byte	0
+  76 000d 01       		.byte	1
+  77 000e 01       		.byte	1
+  78 000f 02       		.byte	2
+  79 0010 03       		.byte	3
+  80 0011 01       		.byte	1
+  81 0012 09       		.byte	9
+  82 0013 02       		.byte	2
+  83 0014 43       		.byte	67
+  84 0015 00       		.byte	0
+  85 0016 02       		.byte	2
+  86 0017 01       		.byte	1
+  87 0018 00       		.byte	0
+  88 0019 C0       		.byte	-64
+  89 001a 32       		.byte	50
+  90 001b 09       		.byte	9
+  91 001c 04       		.byte	4
+  92 001d 00       		.byte	0
+  93 001e 00       		.byte	0
+  94 001f 01       		.byte	1
+  95 0020 02       		.byte	2
+  96 0021 02       		.byte	2
+  97 0022 01       		.byte	1
+  98 0023 00       		.byte	0
+  99 0024 05       		.byte	5
+ 100 0025 24       		.byte	36
+ 101 0026 00       		.byte	0
+ 102 0027 10       		.byte	16
+ 103 0028 01       		.byte	1
+ARM GAS  /tmp/ccMH51UR.s 			page 3
+
+
+ 104 0029 05       		.byte	5
+ 105 002a 24       		.byte	36
+ 106 002b 01       		.byte	1
+ 107 002c 01       		.byte	1
+ 108 002d 01       		.byte	1
+ 109 002e 04       		.byte	4
+ 110 002f 24       		.byte	36
+ 111 0030 02       		.byte	2
+ 112 0031 02       		.byte	2
+ 113 0032 05       		.byte	5
+ 114 0033 24       		.byte	36
+ 115 0034 06       		.byte	6
+ 116 0035 00       		.byte	0
+ 117 0036 01       		.byte	1
+ 118 0037 07       		.byte	7
+ 119 0038 05       		.byte	5
+ 120 0039 81       		.byte	-127
+ 121 003a 03       		.byte	3
+ 122 003b 08       		.byte	8
+ 123 003c 00       		.byte	0
+ 124 003d 0A       		.byte	10
+ 125 003e 09       		.byte	9
+ 126 003f 04       		.byte	4
+ 127 0040 01       		.byte	1
+ 128 0041 00       		.byte	0
+ 129 0042 02       		.byte	2
+ 130 0043 0A       		.byte	10
+ 131 0044 00       		.byte	0
+ 132 0045 00       		.byte	0
+ 133 0046 00       		.byte	0
+ 134 0047 07       		.byte	7
+ 135 0048 05       		.byte	5
+ 136 0049 05       		.byte	5
+ 137 004a 02       		.byte	2
+ 138 004b 40       		.byte	64
+ 139 004c 00       		.byte	0
+ 140 004d 00       		.byte	0
+ 141 004e 07       		.byte	7
+ 142 004f 05       		.byte	5
+ 143 0050 82       		.byte	-126
+ 144 0051 02       		.byte	2
+ 145 0052 40       		.byte	64
+ 146 0053 00       		.byte	0
+ 147 0054 00       		.byte	0
+ 148 0055 04       		.byte	4
+ 149 0056 03       		.byte	3
+ 150 0057 09       		.byte	9
+ 151 0058 04       		.byte	4
+ 152 0059 44       		.byte	68
+ 153 005a 03       		.byte	3
+ 154 005b 68       		.byte	104
+ 155 005c 00       		.byte	0
+ 156 005d 74       		.byte	116
+ 157 005e 00       		.byte	0
+ 158 005f 74       		.byte	116
+ 159 0060 00       		.byte	0
+ 160 0061 70       		.byte	112
+ARM GAS  /tmp/ccMH51UR.s 			page 4
+
+
+ 161 0062 00       		.byte	0
+ 162 0063 3A       		.byte	58
+ 163 0064 00       		.byte	0
+ 164 0065 2F       		.byte	47
+ 165 0066 00       		.byte	0
+ 166 0067 2F       		.byte	47
+ 167 0068 00       		.byte	0
+ 168 0069 75       		.byte	117
+ 169 006a 00       		.byte	0
+ 170 006b 62       		.byte	98
+ 171 006c 00       		.byte	0
+ 172 006d 65       		.byte	101
+ 173 006e 00       		.byte	0
+ 174 006f 72       		.byte	114
+ 175 0070 00       		.byte	0
+ 176 0071 74       		.byte	116
+ 177 0072 00       		.byte	0
+ 178 0073 6F       		.byte	111
+ 179 0074 00       		.byte	0
+ 180 0075 6F       		.byte	111
+ 181 0076 00       		.byte	0
+ 182 0077 74       		.byte	116
+ 183 0078 00       		.byte	0
+ 184 0079 68       		.byte	104
+ 185 007a 00       		.byte	0
+ 186 007b 2E       		.byte	46
+ 187 007c 00       		.byte	0
+ 188 007d 73       		.byte	115
+ 189 007e 00       		.byte	0
+ 190 007f 6F       		.byte	111
+ 191 0080 00       		.byte	0
+ 192 0081 75       		.byte	117
+ 193 0082 00       		.byte	0
+ 194 0083 72       		.byte	114
+ 195 0084 00       		.byte	0
+ 196 0085 63       		.byte	99
+ 197 0086 00       		.byte	0
+ 198 0087 65       		.byte	101
+ 199 0088 00       		.byte	0
+ 200 0089 66       		.byte	102
+ 201 008a 00       		.byte	0
+ 202 008b 6F       		.byte	111
+ 203 008c 00       		.byte	0
+ 204 008d 72       		.byte	114
+ 205 008e 00       		.byte	0
+ 206 008f 67       		.byte	103
+ 207 0090 00       		.byte	0
+ 208 0091 65       		.byte	101
+ 209 0092 00       		.byte	0
+ 210 0093 2E       		.byte	46
+ 211 0094 00       		.byte	0
+ 212 0095 6E       		.byte	110
+ 213 0096 00       		.byte	0
+ 214 0097 65       		.byte	101
+ 215 0098 00       		.byte	0
+ 216 0099 74       		.byte	116
+ 217 009a 00       		.byte	0
+ARM GAS  /tmp/ccMH51UR.s 			page 5
+
+
+ 218 009b 2F       		.byte	47
+ 219 009c 00       		.byte	0
+ 220 009d 22       		.byte	34
+ 221 009e 03       		.byte	3
+ 222 009f 55       		.byte	85
+ 223 00a0 00       		.byte	0
+ 224 00a1 62       		.byte	98
+ 225 00a2 00       		.byte	0
+ 226 00a3 65       		.byte	101
+ 227 00a4 00       		.byte	0
+ 228 00a5 72       		.byte	114
+ 229 00a6 00       		.byte	0
+ 230 00a7 74       		.byte	116
+ 231 00a8 00       		.byte	0
+ 232 00a9 6F       		.byte	111
+ 233 00aa 00       		.byte	0
+ 234 00ab 6F       		.byte	111
+ 235 00ac 00       		.byte	0
+ 236 00ad 74       		.byte	116
+ 237 00ae 00       		.byte	0
+ 238 00af 68       		.byte	104
+ 239 00b0 00       		.byte	0
+ 240 00b1 20       		.byte	32
+ 241 00b2 00       		.byte	0
+ 242 00b3 73       		.byte	115
+ 243 00b4 00       		.byte	0
+ 244 00b5 65       		.byte	101
+ 245 00b6 00       		.byte	0
+ 246 00b7 72       		.byte	114
+ 247 00b8 00       		.byte	0
+ 248 00b9 69       		.byte	105
+ 249 00ba 00       		.byte	0
+ 250 00bb 61       		.byte	97
+ 251 00bc 00       		.byte	0
+ 252 00bd 6C       		.byte	108
+ 253 00be 00       		.byte	0
+ 254 00bf 12       		.byte	18
+ 255 00c0 03       		.byte	3
+ 256 00c1 30       		.byte	48
+ 257 00c2 00       		.byte	0
+ 258 00c3 30       		.byte	48
+ 259 00c4 00       		.byte	0
+ 260 00c5 30       		.byte	48
+ 261 00c6 00       		.byte	0
+ 262 00c7 30       		.byte	48
+ 263 00c8 00       		.byte	0
+ 264 00c9 30       		.byte	48
+ 265 00ca 00       		.byte	0
+ 266 00cb 30       		.byte	48
+ 267 00cc 00       		.byte	0
+ 268 00cd 30       		.byte	48
+ 269 00ce 00       		.byte	0
+ 270 00cf 31       		.byte	49
+ 271 00d0 00       		.byte	0
+ 272 00d1 00       		.byte	0
+ 273              		.section	.text.HandleClassRequest,"ax",%progbits
+ 274              		.align	2
+ARM GAS  /tmp/ccMH51UR.s 			page 6
+
+
+ 275              		.thumb
+ 276              		.thumb_func
+ 278              	HandleClassRequest:
+ 279              	.LFB0:
+ 280              		.file 1 "../common/usb_serial.c"
+   1:../common/usb_serial.c **** /*
+   2:../common/usb_serial.c ****  * Copyright 2010, 2011 Michael Ossmann
+   3:../common/usb_serial.c ****  *
+   4:../common/usb_serial.c ****  * This file is part of Project Ubertooth.
+   5:../common/usb_serial.c ****  *
+   6:../common/usb_serial.c ****  * This program is free software; you can redistribute it and/or modify
+   7:../common/usb_serial.c ****  * it under the terms of the GNU General Public License as published by
+   8:../common/usb_serial.c ****  * the Free Software Foundation; either version 2, or (at your option)
+   9:../common/usb_serial.c ****  * any later version.
+  10:../common/usb_serial.c ****  *
+  11:../common/usb_serial.c ****  * This program is distributed in the hope that it will be useful,
+  12:../common/usb_serial.c ****  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:../common/usb_serial.c ****  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:../common/usb_serial.c ****  * GNU General Public License for more details.
+  15:../common/usb_serial.c ****  *
+  16:../common/usb_serial.c ****  * You should have received a copy of the GNU General Public License
+  17:../common/usb_serial.c ****  * along with this program; see the file COPYING.  If not, write to
+  18:../common/usb_serial.c ****  * the Free Software Foundation, Inc., 51 Franklin Street,
+  19:../common/usb_serial.c ****  * Boston, MA 02110-1301, USA.
+  20:../common/usb_serial.c ****  */
+  21:../common/usb_serial.c **** 
+  22:../common/usb_serial.c **** /*
+  23:../common/usb_serial.c **** 	LPCUSB, an USB device driver for LPC microcontrollers	
+  24:../common/usb_serial.c **** 	Copyright (C) 2006 Bertrik Sikken (bertrik@sikken.nl)
+  25:../common/usb_serial.c **** 
+  26:../common/usb_serial.c **** 	Redistribution and use in source and binary forms, with or without
+  27:../common/usb_serial.c **** 	modification, are permitted provided that the following conditions are met:
+  28:../common/usb_serial.c **** 
+  29:../common/usb_serial.c **** 	1. Redistributions of source code must retain the above copyright
+  30:../common/usb_serial.c **** 	   notice, this list of conditions and the following disclaimer.
+  31:../common/usb_serial.c **** 	2. Redistributions in binary form must reproduce the above copyright
+  32:../common/usb_serial.c **** 	   notice, this list of conditions and the following disclaimer in the
+  33:../common/usb_serial.c **** 	   documentation and/or other materials provided with the distribution.
+  34:../common/usb_serial.c **** 	3. The name of the author may not be used to endorse or promote products
+  35:../common/usb_serial.c **** 	   derived from this software without specific prior written permission.
+  36:../common/usb_serial.c **** 
+  37:../common/usb_serial.c **** 	THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+  38:../common/usb_serial.c **** 	IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+  39:../common/usb_serial.c **** 	OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  40:../common/usb_serial.c **** 	IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, 
+  41:../common/usb_serial.c **** 	INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  42:../common/usb_serial.c **** 	NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  43:../common/usb_serial.c **** 	DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  44:../common/usb_serial.c **** 	THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  45:../common/usb_serial.c **** 	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+  46:../common/usb_serial.c **** 	THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  47:../common/usb_serial.c **** */
+  48:../common/usb_serial.c **** 
+  49:../common/usb_serial.c **** #include "ubertooth.h"
+  50:../common/usb_serial.c **** #include "usb_serial.h"
+  51:../common/usb_serial.c **** #include "serial_fifo.h"
+  52:../common/usb_serial.c **** #include <string.h>
+ARM GAS  /tmp/ccMH51UR.s 			page 7
+
+
+  53:../common/usb_serial.c **** 
+  54:../common/usb_serial.c **** static TLineCoding LineCoding = {115200, 0, 0, 8};
+  55:../common/usb_serial.c **** static U8 abBulkBuf[64];
+  56:../common/usb_serial.c **** static U8 abClassReqData[8];
+  57:../common/usb_serial.c **** static volatile BOOL fBulkInBusy;
+  58:../common/usb_serial.c **** static volatile BOOL fChainDone;
+  59:../common/usb_serial.c **** 
+  60:../common/usb_serial.c **** static U8 txdata[VCOM_FIFO_SIZE];
+  61:../common/usb_serial.c **** static U8 rxdata[VCOM_FIFO_SIZE];
+  62:../common/usb_serial.c **** 
+  63:../common/usb_serial.c **** static fifo_t txfifo;
+  64:../common/usb_serial.c **** static fifo_t rxfifo;
+  65:../common/usb_serial.c **** 
+  66:../common/usb_serial.c **** static const U8 abDescriptors[] = {
+  67:../common/usb_serial.c **** 
+  68:../common/usb_serial.c **** // device descriptor
+  69:../common/usb_serial.c **** 	0x12,
+  70:../common/usb_serial.c **** 	DESC_DEVICE,
+  71:../common/usb_serial.c **** 	LE_WORD(0x0101),			// bcdUSB
+  72:../common/usb_serial.c **** 	0x02,						// bDeviceClass
+  73:../common/usb_serial.c **** 	0x00,						// bDeviceSubClass
+  74:../common/usb_serial.c **** 	0x00,						// bDeviceProtocol
+  75:../common/usb_serial.c **** 	MAX_PACKET_SIZE0,			// bMaxPacketSize
+  76:../common/usb_serial.c **** 	LE_WORD(0xFFFF),			// idVendor
+  77:../common/usb_serial.c **** 	LE_WORD(0x0005),			// idProduct
+  78:../common/usb_serial.c **** 	LE_WORD(0x0100),			// bcdDevice
+  79:../common/usb_serial.c **** 	0x01,						// iManufacturer
+  80:../common/usb_serial.c **** 	0x02,						// iProduct
+  81:../common/usb_serial.c **** 	0x03,						// iSerialNumber
+  82:../common/usb_serial.c **** 	0x01,						// bNumConfigurations
+  83:../common/usb_serial.c **** 
+  84:../common/usb_serial.c **** // configuration descriptor
+  85:../common/usb_serial.c **** 	0x09,
+  86:../common/usb_serial.c **** 	DESC_CONFIGURATION,
+  87:../common/usb_serial.c **** 	LE_WORD(67),				// wTotalLength
+  88:../common/usb_serial.c **** 	0x02,						// bNumInterfaces
+  89:../common/usb_serial.c **** 	0x01,						// bConfigurationValue
+  90:../common/usb_serial.c **** 	0x00,						// iConfiguration
+  91:../common/usb_serial.c **** 	0xC0,						// bmAttributes
+  92:../common/usb_serial.c **** 	0x32,						// bMaxPower
+  93:../common/usb_serial.c **** // control class interface
+  94:../common/usb_serial.c **** 	0x09,
+  95:../common/usb_serial.c **** 	DESC_INTERFACE,
+  96:../common/usb_serial.c **** 	0x00,						// bInterfaceNumber
+  97:../common/usb_serial.c **** 	0x00,						// bAlternateSetting
+  98:../common/usb_serial.c **** 	0x01,						// bNumEndPoints
+  99:../common/usb_serial.c **** 	0x02,						// bInterfaceClass
+ 100:../common/usb_serial.c **** 	0x02,						// bInterfaceSubClass
+ 101:../common/usb_serial.c **** 	0x01,						// bInterfaceProtocol, linux requires value of 1 for the cdc_acm module
+ 102:../common/usb_serial.c **** 	0x00,						// iInterface
+ 103:../common/usb_serial.c **** // header functional descriptor
+ 104:../common/usb_serial.c **** 	0x05,
+ 105:../common/usb_serial.c **** 	CS_INTERFACE,
+ 106:../common/usb_serial.c **** 	0x00,
+ 107:../common/usb_serial.c **** 	LE_WORD(0x0110),
+ 108:../common/usb_serial.c **** // call management functional descriptor
+ 109:../common/usb_serial.c **** 	0x05,
+ARM GAS  /tmp/ccMH51UR.s 			page 8
+
+
+ 110:../common/usb_serial.c **** 	CS_INTERFACE,
+ 111:../common/usb_serial.c **** 	0x01,
+ 112:../common/usb_serial.c **** 	0x01,						// bmCapabilities = device handles call management
+ 113:../common/usb_serial.c **** 	0x01,						// bDataInterface
+ 114:../common/usb_serial.c **** // ACM functional descriptor
+ 115:../common/usb_serial.c **** 	0x04,
+ 116:../common/usb_serial.c **** 	CS_INTERFACE,
+ 117:../common/usb_serial.c **** 	0x02,
+ 118:../common/usb_serial.c **** 	0x02,						// bmCapabilities
+ 119:../common/usb_serial.c **** // union functional descriptor
+ 120:../common/usb_serial.c **** 	0x05,
+ 121:../common/usb_serial.c **** 	CS_INTERFACE,
+ 122:../common/usb_serial.c **** 	0x06,
+ 123:../common/usb_serial.c **** 	0x00,						// bMasterInterface
+ 124:../common/usb_serial.c **** 	0x01,						// bSlaveInterface0
+ 125:../common/usb_serial.c **** // notification EP
+ 126:../common/usb_serial.c **** 	0x07,
+ 127:../common/usb_serial.c **** 	DESC_ENDPOINT,
+ 128:../common/usb_serial.c **** 	INT_IN_EP,					// bEndpointAddress
+ 129:../common/usb_serial.c **** 	0x03,						// bmAttributes = intr
+ 130:../common/usb_serial.c **** 	LE_WORD(8),					// wMaxPacketSize
+ 131:../common/usb_serial.c **** 	0x0A,						// bInterval
+ 132:../common/usb_serial.c **** // data class interface descriptor
+ 133:../common/usb_serial.c **** 	0x09,
+ 134:../common/usb_serial.c **** 	DESC_INTERFACE,
+ 135:../common/usb_serial.c **** 	0x01,						// bInterfaceNumber
+ 136:../common/usb_serial.c **** 	0x00,						// bAlternateSetting
+ 137:../common/usb_serial.c **** 	0x02,						// bNumEndPoints
+ 138:../common/usb_serial.c **** 	0x0A,						// bInterfaceClass = data
+ 139:../common/usb_serial.c **** 	0x00,						// bInterfaceSubClass
+ 140:../common/usb_serial.c **** 	0x00,						// bInterfaceProtocol
+ 141:../common/usb_serial.c **** 	0x00,						// iInterface
+ 142:../common/usb_serial.c **** // data EP OUT
+ 143:../common/usb_serial.c **** 	0x07,
+ 144:../common/usb_serial.c **** 	DESC_ENDPOINT,
+ 145:../common/usb_serial.c **** 	BULK_OUT_EP,				// bEndpointAddress
+ 146:../common/usb_serial.c **** 	0x02,						// bmAttributes = bulk
+ 147:../common/usb_serial.c **** 	LE_WORD(MAX_PACKET_SIZE),	// wMaxPacketSize
+ 148:../common/usb_serial.c **** 	0x00,						// bInterval
+ 149:../common/usb_serial.c **** // data EP in
+ 150:../common/usb_serial.c **** 	0x07,
+ 151:../common/usb_serial.c **** 	DESC_ENDPOINT,
+ 152:../common/usb_serial.c **** 	BULK_IN_EP,					// bEndpointAddress
+ 153:../common/usb_serial.c **** 	0x02,						// bmAttributes = bulk
+ 154:../common/usb_serial.c **** 	LE_WORD(MAX_PACKET_SIZE),	// wMaxPacketSize
+ 155:../common/usb_serial.c **** 	0x00,						// bInterval
+ 156:../common/usb_serial.c **** 	
+ 157:../common/usb_serial.c **** 	// string descriptors
+ 158:../common/usb_serial.c **** 	0x04,
+ 159:../common/usb_serial.c **** 	DESC_STRING,
+ 160:../common/usb_serial.c **** 	LE_WORD(0x0409),
+ 161:../common/usb_serial.c **** 
+ 162:../common/usb_serial.c **** 	// manufacturer
+ 163:../common/usb_serial.c **** 	0x44,
+ 164:../common/usb_serial.c **** 	DESC_STRING,
+ 165:../common/usb_serial.c **** 	'h', 0, 't', 0, 't', 0, 'p', 0, ':', 0, '/', 0, '/', 0, 'u', 0,
+ 166:../common/usb_serial.c **** 	'b', 0, 'e', 0, 'r', 0, 't', 0, 'o', 0, 'o', 0, 't', 0, 'h', 0,
+ARM GAS  /tmp/ccMH51UR.s 			page 9
+
+
+ 167:../common/usb_serial.c **** 	'.', 0, 's', 0, 'o', 0, 'u', 0, 'r', 0, 'c', 0, 'e', 0, 'f', 0,
+ 168:../common/usb_serial.c **** 	'o', 0, 'r', 0, 'g', 0, 'e', 0, '.', 0, 'n', 0, 'e', 0, 't', 0,
+ 169:../common/usb_serial.c **** 	'/', 0,
+ 170:../common/usb_serial.c **** 
+ 171:../common/usb_serial.c **** 	// product
+ 172:../common/usb_serial.c **** 	0x22,
+ 173:../common/usb_serial.c **** 	DESC_STRING,
+ 174:../common/usb_serial.c **** 	'U', 0, 'b', 0, 'e', 0, 'r', 0, 't', 0, 'o', 0, 'o', 0, 't', 0,
+ 175:../common/usb_serial.c **** 	'h', 0, ' ', 0, 's', 0, 'e', 0, 'r', 0, 'i', 0, 'a', 0, 'l', 0,
+ 176:../common/usb_serial.c **** 
+ 177:../common/usb_serial.c **** 	// serial number
+ 178:../common/usb_serial.c **** 	0x12,
+ 179:../common/usb_serial.c **** 	DESC_STRING,
+ 180:../common/usb_serial.c **** 	'0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '1', 0,
+ 181:../common/usb_serial.c **** 
+ 182:../common/usb_serial.c **** // terminating zero
+ 183:../common/usb_serial.c **** 	0
+ 184:../common/usb_serial.c **** };
+ 185:../common/usb_serial.c **** 
+ 186:../common/usb_serial.c **** /**
+ 187:../common/usb_serial.c **** 	Local function to handle the USB-CDC class requests
+ 188:../common/usb_serial.c **** 		
+ 189:../common/usb_serial.c **** 	@param [in] pSetup
+ 190:../common/usb_serial.c **** 	@param [out] piLen
+ 191:../common/usb_serial.c **** 	@param [out] ppbData
+ 192:../common/usb_serial.c ****  */
+ 193:../common/usb_serial.c **** static BOOL HandleClassRequest(TSetupPacket *pSetup, int *piLen, U8 **ppbData)
+ 194:../common/usb_serial.c **** {
+ 281              		.loc 1 194 0
+ 282              		.cfi_startproc
+ 283              		@ args = 0, pretend = 0, frame = 16
+ 284              		@ frame_needed = 1, uses_anonymous_args = 0
+ 285 0000 80B5     		push	{r7, lr}
+ 286              		.cfi_def_cfa_offset 8
+ 287              		.cfi_offset 7, -8
+ 288              		.cfi_offset 14, -4
+ 289 0002 84B0     		sub	sp, sp, #16
+ 290              		.cfi_def_cfa_offset 24
+ 291 0004 00AF     		add	r7, sp, #0
+ 292              		.cfi_def_cfa_register 7
+ 293 0006 F860     		str	r0, [r7, #12]
+ 294 0008 B960     		str	r1, [r7, #8]
+ 295 000a 7A60     		str	r2, [r7, #4]
+ 195:../common/usb_serial.c **** 	switch (pSetup->bRequest) {
+ 296              		.loc 1 195 0
+ 297 000c FB68     		ldr	r3, [r7, #12]
+ 298 000e 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 299 0010 212B     		cmp	r3, #33
+ 300 0012 0ED0     		beq	.L3
+ 301 0014 222B     		cmp	r3, #34
+ 302 0016 15D0     		beq	.L9
+ 303 0018 202B     		cmp	r3, #32
+ 304 001a 11D1     		bne	.L8
+ 196:../common/usb_serial.c **** 
+ 197:../common/usb_serial.c **** 	// set line coding
+ 198:../common/usb_serial.c **** 	case SET_LINE_CODING:
+ 199:../common/usb_serial.c **** 		memcpy((U8 *)&LineCoding, *ppbData, 7);
+ARM GAS  /tmp/ccMH51UR.s 			page 10
+
+
+ 305              		.loc 1 199 0
+ 306 001c 7B68     		ldr	r3, [r7, #4]
+ 307 001e 1B68     		ldr	r3, [r3]
+ 308 0020 0B48     		ldr	r0, .L10
+ 309 0022 1946     		mov	r1, r3
+ 310 0024 0722     		movs	r2, #7
+ 311 0026 FFF7FEFF 		bl	memcpy
+ 200:../common/usb_serial.c **** 		*piLen = 7;
+ 312              		.loc 1 200 0
+ 313 002a BB68     		ldr	r3, [r7, #8]
+ 314 002c 0722     		movs	r2, #7
+ 315 002e 1A60     		str	r2, [r3]
+ 201:../common/usb_serial.c **** 		break;
+ 316              		.loc 1 201 0
+ 317 0030 09E0     		b	.L6
+ 318              	.L3:
+ 202:../common/usb_serial.c **** 
+ 203:../common/usb_serial.c **** 	// get line coding
+ 204:../common/usb_serial.c **** 	case GET_LINE_CODING:
+ 205:../common/usb_serial.c **** 		*ppbData = (U8 *)&LineCoding;
+ 319              		.loc 1 205 0
+ 320 0032 7B68     		ldr	r3, [r7, #4]
+ 321 0034 064A     		ldr	r2, .L10
+ 322 0036 1A60     		str	r2, [r3]
+ 206:../common/usb_serial.c **** 		*piLen = 7;
+ 323              		.loc 1 206 0
+ 324 0038 BB68     		ldr	r3, [r7, #8]
+ 325 003a 0722     		movs	r2, #7
+ 326 003c 1A60     		str	r2, [r3]
+ 207:../common/usb_serial.c **** 		break;
+ 327              		.loc 1 207 0
+ 328 003e 02E0     		b	.L6
+ 329              	.L8:
+ 208:../common/usb_serial.c **** 
+ 209:../common/usb_serial.c **** 	// set control line state
+ 210:../common/usb_serial.c **** 	case SET_CONTROL_LINE_STATE:
+ 211:../common/usb_serial.c **** 		break;
+ 212:../common/usb_serial.c **** 
+ 213:../common/usb_serial.c **** 	default:
+ 214:../common/usb_serial.c **** 		return FALSE;
+ 330              		.loc 1 214 0
+ 331 0040 0023     		movs	r3, #0
+ 332 0042 01E0     		b	.L7
+ 333              	.L9:
+ 211:../common/usb_serial.c **** 
+ 334              		.loc 1 211 0
+ 335 0044 00BF     		nop
+ 336              	.L6:
+ 215:../common/usb_serial.c **** 	}
+ 216:../common/usb_serial.c **** 	return TRUE;
+ 337              		.loc 1 216 0
+ 338 0046 0123     		movs	r3, #1
+ 339              	.L7:
+ 217:../common/usb_serial.c **** }
+ 340              		.loc 1 217 0
+ 341 0048 1846     		mov	r0, r3
+ 342 004a 1037     		adds	r7, r7, #16
+ARM GAS  /tmp/ccMH51UR.s 			page 11
+
+
+ 343              		.cfi_def_cfa_offset 8
+ 344 004c BD46     		mov	sp, r7
+ 345              		.cfi_def_cfa_register 13
+ 346              		@ sp needed
+ 347 004e 80BD     		pop	{r7, pc}
+ 348              	.L11:
+ 349              		.align	2
+ 350              	.L10:
+ 351 0050 04000000 		.word	LineCoding
+ 352              		.cfi_endproc
+ 353              	.LFE0:
+ 355              		.section	.text.BulkOut,"ax",%progbits
+ 356              		.align	2
+ 357              		.thumb
+ 358              		.thumb_func
+ 360              	BulkOut:
+ 361              	.LFB1:
+ 218:../common/usb_serial.c **** 
+ 219:../common/usb_serial.c **** /**
+ 220:../common/usb_serial.c **** 	Local function to handle incoming bulk data
+ 221:../common/usb_serial.c **** 		
+ 222:../common/usb_serial.c **** 	@param [in] bEP
+ 223:../common/usb_serial.c **** 	@param [in] bEPStatus
+ 224:../common/usb_serial.c ****  */
+ 225:../common/usb_serial.c **** static void BulkOut(U8 bEP, U8 bEPStatus)
+ 226:../common/usb_serial.c **** {
+ 362              		.loc 1 226 0
+ 363              		.cfi_startproc
+ 364              		@ args = 0, pretend = 0, frame = 16
+ 365              		@ frame_needed = 1, uses_anonymous_args = 0
+ 366 0000 80B5     		push	{r7, lr}
+ 367              		.cfi_def_cfa_offset 8
+ 368              		.cfi_offset 7, -8
+ 369              		.cfi_offset 14, -4
+ 370 0002 84B0     		sub	sp, sp, #16
+ 371              		.cfi_def_cfa_offset 24
+ 372 0004 00AF     		add	r7, sp, #0
+ 373              		.cfi_def_cfa_register 7
+ 374 0006 0346     		mov	r3, r0
+ 375 0008 0A46     		mov	r2, r1
+ 376 000a FB71     		strb	r3, [r7, #7]
+ 377 000c 1346     		mov	r3, r2
+ 378 000e BB71     		strb	r3, [r7, #6]
+ 227:../common/usb_serial.c **** 	int i, iLen;
+ 228:../common/usb_serial.c **** 
+ 229:../common/usb_serial.c **** 	if (fifo_free(&rxfifo) < MAX_PACKET_SIZE) {
+ 379              		.loc 1 229 0
+ 380 0010 1348     		ldr	r0, .L18
+ 381 0012 FFF7FEFF 		bl	fifo_free
+ 382 0016 0346     		mov	r3, r0
+ 383 0018 3F2B     		cmp	r3, #63
+ 384 001a 00DC     		bgt	.L13
+ 230:../common/usb_serial.c **** 		// may not fit into fifo
+ 231:../common/usb_serial.c **** 		return;
+ 385              		.loc 1 231 0
+ 386 001c 1CE0     		b	.L12
+ 387              	.L13:
+ARM GAS  /tmp/ccMH51UR.s 			page 12
+
+
+ 232:../common/usb_serial.c **** 	}
+ 233:../common/usb_serial.c **** 
+ 234:../common/usb_serial.c **** 	// get data from USB into intermediate buffer
+ 235:../common/usb_serial.c **** 	iLen = USBHwEPRead(bEP, abBulkBuf, sizeof(abBulkBuf));
+ 388              		.loc 1 235 0
+ 389 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 390 0020 1846     		mov	r0, r3
+ 391 0022 1049     		ldr	r1, .L18+4
+ 392 0024 4022     		movs	r2, #64
+ 393 0026 FFF7FEFF 		bl	USBHwEPRead
+ 394 002a B860     		str	r0, [r7, #8]
+ 236:../common/usb_serial.c **** 	for (i = 0; i < iLen; i++) {
+ 395              		.loc 1 236 0
+ 396 002c 0023     		movs	r3, #0
+ 397 002e FB60     		str	r3, [r7, #12]
+ 398 0030 0EE0     		b	.L15
+ 399              	.L17:
+ 237:../common/usb_serial.c **** 		// put into FIFO
+ 238:../common/usb_serial.c **** 		if (!fifo_put(&rxfifo, abBulkBuf[i])) {
+ 400              		.loc 1 238 0
+ 401 0032 0C4A     		ldr	r2, .L18+4
+ 402 0034 FB68     		ldr	r3, [r7, #12]
+ 403 0036 1344     		add	r3, r3, r2
+ 404 0038 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 405 003a 0948     		ldr	r0, .L18
+ 406 003c 1946     		mov	r1, r3
+ 407 003e FFF7FEFF 		bl	fifo_put
+ 408 0042 0346     		mov	r3, r0
+ 409 0044 002B     		cmp	r3, #0
+ 410 0046 00D1     		bne	.L16
+ 239:../common/usb_serial.c **** 			// overflow... :(
+ 240:../common/usb_serial.c **** 			//ASSERT(FALSE);
+ 241:../common/usb_serial.c **** 			break;
+ 411              		.loc 1 241 0
+ 412 0048 06E0     		b	.L12
+ 413              	.L16:
+ 236:../common/usb_serial.c **** 		// put into FIFO
+ 414              		.loc 1 236 0 discriminator 2
+ 415 004a FB68     		ldr	r3, [r7, #12]
+ 416 004c 0133     		adds	r3, r3, #1
+ 417 004e FB60     		str	r3, [r7, #12]
+ 418              	.L15:
+ 236:../common/usb_serial.c **** 		// put into FIFO
+ 419              		.loc 1 236 0 is_stmt 0 discriminator 1
+ 420 0050 FA68     		ldr	r2, [r7, #12]
+ 421 0052 BB68     		ldr	r3, [r7, #8]
+ 422 0054 9A42     		cmp	r2, r3
+ 423 0056 ECDB     		blt	.L17
+ 424              	.L12:
+ 242:../common/usb_serial.c **** 		}
+ 243:../common/usb_serial.c **** 	}
+ 244:../common/usb_serial.c **** }
+ 425              		.loc 1 244 0 is_stmt 1
+ 426 0058 1037     		adds	r7, r7, #16
+ 427              		.cfi_def_cfa_offset 8
+ 428 005a BD46     		mov	sp, r7
+ 429              		.cfi_def_cfa_register 13
+ARM GAS  /tmp/ccMH51UR.s 			page 13
+
+
+ 430              		@ sp needed
+ 431 005c 80BD     		pop	{r7, pc}
+ 432              	.L19:
+ 433 005e 00BF     		.align	2
+ 434              	.L18:
+ 435 0060 5C010000 		.word	rxfifo
+ 436 0064 00000000 		.word	abBulkBuf
+ 437              		.cfi_endproc
+ 438              	.LFE1:
+ 440              		.section	.text.SendNextBulkIn,"ax",%progbits
+ 441              		.align	2
+ 442              		.thumb
+ 443              		.thumb_func
+ 445              	SendNextBulkIn:
+ 446              	.LFB2:
+ 245:../common/usb_serial.c **** 
+ 246:../common/usb_serial.c **** /**
+ 247:../common/usb_serial.c **** 	Sends the next packet in chain of packets to the host
+ 248:../common/usb_serial.c **** 		
+ 249:../common/usb_serial.c **** 	@param [in] bEP
+ 250:../common/usb_serial.c **** 	@param [in] bEPStatus
+ 251:../common/usb_serial.c ****  */
+ 252:../common/usb_serial.c **** static void SendNextBulkIn(U8 bEP, BOOL fFirstPacket)
+ 253:../common/usb_serial.c **** {
+ 447              		.loc 1 253 0
+ 448              		.cfi_startproc
+ 449              		@ args = 0, pretend = 0, frame = 16
+ 450              		@ frame_needed = 1, uses_anonymous_args = 0
+ 451 0000 80B5     		push	{r7, lr}
+ 452              		.cfi_def_cfa_offset 8
+ 453              		.cfi_offset 7, -8
+ 454              		.cfi_offset 14, -4
+ 455 0002 84B0     		sub	sp, sp, #16
+ 456              		.cfi_def_cfa_offset 24
+ 457 0004 00AF     		add	r7, sp, #0
+ 458              		.cfi_def_cfa_register 7
+ 459 0006 0346     		mov	r3, r0
+ 460 0008 3960     		str	r1, [r7]
+ 461 000a FB71     		strb	r3, [r7, #7]
+ 254:../common/usb_serial.c **** 	int iLen;
+ 255:../common/usb_serial.c **** 
+ 256:../common/usb_serial.c **** 	// this transfer is done
+ 257:../common/usb_serial.c **** 	fBulkInBusy = FALSE;
+ 462              		.loc 1 257 0
+ 463 000c 1A4B     		ldr	r3, .L28
+ 464 000e 0022     		movs	r2, #0
+ 465 0010 1A60     		str	r2, [r3]
+ 258:../common/usb_serial.c **** 	
+ 259:../common/usb_serial.c **** 	// first packet?
+ 260:../common/usb_serial.c **** 	if (fFirstPacket) {
+ 466              		.loc 1 260 0
+ 467 0012 3B68     		ldr	r3, [r7]
+ 468 0014 002B     		cmp	r3, #0
+ 469 0016 02D0     		beq	.L21
+ 261:../common/usb_serial.c **** 		fChainDone = FALSE;
+ 470              		.loc 1 261 0
+ 471 0018 184B     		ldr	r3, .L28+4
+ARM GAS  /tmp/ccMH51UR.s 			page 14
+
+
+ 472 001a 0022     		movs	r2, #0
+ 473 001c 1A60     		str	r2, [r3]
+ 474              	.L21:
+ 262:../common/usb_serial.c **** 	}
+ 263:../common/usb_serial.c **** 
+ 264:../common/usb_serial.c **** 	// last packet?
+ 265:../common/usb_serial.c **** 	if (fChainDone) {
+ 475              		.loc 1 265 0
+ 476 001e 174B     		ldr	r3, .L28+4
+ 477 0020 1B68     		ldr	r3, [r3]
+ 478 0022 002B     		cmp	r3, #0
+ 479 0024 00D0     		beq	.L22
+ 266:../common/usb_serial.c **** 		return;
+ 480              		.loc 1 266 0
+ 481 0026 23E0     		b	.L20
+ 482              	.L22:
+ 267:../common/usb_serial.c **** 	}
+ 268:../common/usb_serial.c **** 	
+ 269:../common/usb_serial.c **** 	// get up to MAX_PACKET_SIZE bytes from transmit FIFO into intermediate buffer
+ 270:../common/usb_serial.c **** 	for (iLen = 0; iLen < MAX_PACKET_SIZE; iLen++) {
+ 483              		.loc 1 270 0
+ 484 0028 0023     		movs	r3, #0
+ 485 002a FB60     		str	r3, [r7, #12]
+ 486 002c 0DE0     		b	.L24
+ 487              	.L27:
+ 271:../common/usb_serial.c **** 		if (!fifo_get(&txfifo, &abBulkBuf[iLen])) {
+ 488              		.loc 1 271 0
+ 489 002e FB68     		ldr	r3, [r7, #12]
+ 490 0030 134A     		ldr	r2, .L28+8
+ 491 0032 1344     		add	r3, r3, r2
+ 492 0034 1348     		ldr	r0, .L28+12
+ 493 0036 1946     		mov	r1, r3
+ 494 0038 FFF7FEFF 		bl	fifo_get
+ 495 003c 0346     		mov	r3, r0
+ 496 003e 002B     		cmp	r3, #0
+ 497 0040 00D1     		bne	.L25
+ 272:../common/usb_serial.c **** 			break;
+ 498              		.loc 1 272 0
+ 499 0042 05E0     		b	.L26
+ 500              	.L25:
+ 270:../common/usb_serial.c **** 		if (!fifo_get(&txfifo, &abBulkBuf[iLen])) {
+ 501              		.loc 1 270 0 discriminator 2
+ 502 0044 FB68     		ldr	r3, [r7, #12]
+ 503 0046 0133     		adds	r3, r3, #1
+ 504 0048 FB60     		str	r3, [r7, #12]
+ 505              	.L24:
+ 270:../common/usb_serial.c **** 		if (!fifo_get(&txfifo, &abBulkBuf[iLen])) {
+ 506              		.loc 1 270 0 is_stmt 0 discriminator 1
+ 507 004a FB68     		ldr	r3, [r7, #12]
+ 508 004c 3F2B     		cmp	r3, #63
+ 509 004e EEDD     		ble	.L27
+ 510              	.L26:
+ 273:../common/usb_serial.c **** 		}
+ 274:../common/usb_serial.c **** 	}
+ 275:../common/usb_serial.c **** 	
+ 276:../common/usb_serial.c **** 	// send over USB
+ 277:../common/usb_serial.c **** 	USBHwEPWrite(bEP, abBulkBuf, iLen);
+ARM GAS  /tmp/ccMH51UR.s 			page 15
+
+
+ 511              		.loc 1 277 0 is_stmt 1
+ 512 0050 FB68     		ldr	r3, [r7, #12]
+ 513 0052 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 514 0054 1046     		mov	r0, r2
+ 515 0056 0A49     		ldr	r1, .L28+8
+ 516 0058 1A46     		mov	r2, r3
+ 517 005a FFF7FEFF 		bl	USBHwEPWrite
+ 278:../common/usb_serial.c **** 	fBulkInBusy = TRUE;
+ 518              		.loc 1 278 0
+ 519 005e 064B     		ldr	r3, .L28
+ 520 0060 0122     		movs	r2, #1
+ 521 0062 1A60     		str	r2, [r3]
+ 279:../common/usb_serial.c **** 
+ 280:../common/usb_serial.c **** 	// was this a short packet?
+ 281:../common/usb_serial.c **** 	if (iLen < MAX_PACKET_SIZE) {
+ 522              		.loc 1 281 0
+ 523 0064 FB68     		ldr	r3, [r7, #12]
+ 524 0066 3F2B     		cmp	r3, #63
+ 525 0068 02DC     		bgt	.L20
+ 282:../common/usb_serial.c **** 		fChainDone = TRUE;
+ 526              		.loc 1 282 0
+ 527 006a 044B     		ldr	r3, .L28+4
+ 528 006c 0122     		movs	r2, #1
+ 529 006e 1A60     		str	r2, [r3]
+ 530              	.L20:
+ 283:../common/usb_serial.c **** 	}
+ 284:../common/usb_serial.c **** }
+ 531              		.loc 1 284 0
+ 532 0070 1037     		adds	r7, r7, #16
+ 533              		.cfi_def_cfa_offset 8
+ 534 0072 BD46     		mov	sp, r7
+ 535              		.cfi_def_cfa_register 13
+ 536              		@ sp needed
+ 537 0074 80BD     		pop	{r7, pc}
+ 538              	.L29:
+ 539 0076 00BF     		.align	2
+ 540              	.L28:
+ 541 0078 48000000 		.word	fBulkInBusy
+ 542 007c 4C000000 		.word	fChainDone
+ 543 0080 00000000 		.word	abBulkBuf
+ 544 0084 50010000 		.word	txfifo
+ 545              		.cfi_endproc
+ 546              	.LFE2:
+ 548              		.section	.text.BulkIn,"ax",%progbits
+ 549              		.align	2
+ 550              		.thumb
+ 551              		.thumb_func
+ 553              	BulkIn:
+ 554              	.LFB3:
+ 285:../common/usb_serial.c **** 
+ 286:../common/usb_serial.c **** /**
+ 287:../common/usb_serial.c **** 	Local function to handle outgoing bulk data
+ 288:../common/usb_serial.c **** 		
+ 289:../common/usb_serial.c **** 	@param [in] bEP
+ 290:../common/usb_serial.c **** 	@param [in] bEPStatus
+ 291:../common/usb_serial.c ****  */
+ 292:../common/usb_serial.c **** static void BulkIn(U8 bEP, U8 bEPStatus)
+ARM GAS  /tmp/ccMH51UR.s 			page 16
+
+
+ 293:../common/usb_serial.c **** {
+ 555              		.loc 1 293 0
+ 556              		.cfi_startproc
+ 557              		@ args = 0, pretend = 0, frame = 8
+ 558              		@ frame_needed = 1, uses_anonymous_args = 0
+ 559 0000 80B5     		push	{r7, lr}
+ 560              		.cfi_def_cfa_offset 8
+ 561              		.cfi_offset 7, -8
+ 562              		.cfi_offset 14, -4
+ 563 0002 82B0     		sub	sp, sp, #8
+ 564              		.cfi_def_cfa_offset 16
+ 565 0004 00AF     		add	r7, sp, #0
+ 566              		.cfi_def_cfa_register 7
+ 567 0006 0346     		mov	r3, r0
+ 568 0008 0A46     		mov	r2, r1
+ 569 000a FB71     		strb	r3, [r7, #7]
+ 570 000c 1346     		mov	r3, r2
+ 571 000e BB71     		strb	r3, [r7, #6]
+ 294:../common/usb_serial.c **** 	SendNextBulkIn(bEP, FALSE);
+ 572              		.loc 1 294 0
+ 573 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 574 0012 1846     		mov	r0, r3
+ 575 0014 0021     		movs	r1, #0
+ 576 0016 FFF7FEFF 		bl	SendNextBulkIn
+ 295:../common/usb_serial.c **** }
+ 577              		.loc 1 295 0
+ 578 001a 0837     		adds	r7, r7, #8
+ 579              		.cfi_def_cfa_offset 8
+ 580 001c BD46     		mov	sp, r7
+ 581              		.cfi_def_cfa_register 13
+ 582              		@ sp needed
+ 583 001e 80BD     		pop	{r7, pc}
+ 584              		.cfi_endproc
+ 585              	.LFE3:
+ 587              		.section	.text.USBFrameHandler,"ax",%progbits
+ 588              		.align	2
+ 589              		.thumb
+ 590              		.thumb_func
+ 592              	USBFrameHandler:
+ 593              	.LFB4:
+ 296:../common/usb_serial.c **** 
+ 297:../common/usb_serial.c **** /**
+ 298:../common/usb_serial.c **** 	USB frame interrupt handler
+ 299:../common/usb_serial.c **** 	
+ 300:../common/usb_serial.c **** 	Called every milisecond by the hardware driver.
+ 301:../common/usb_serial.c **** 	
+ 302:../common/usb_serial.c **** 	This function is responsible for sending the first of a chain of packets
+ 303:../common/usb_serial.c **** 	to the host. A chain is always terminated by a short packet, either a
+ 304:../common/usb_serial.c **** 	packet shorter than the maximum packet size or a zero-length packet
+ 305:../common/usb_serial.c **** 	(as required by the windows usbser.sys driver).
+ 306:../common/usb_serial.c **** 
+ 307:../common/usb_serial.c ****  */
+ 308:../common/usb_serial.c **** static void USBFrameHandler(U16 wFrame)
+ 309:../common/usb_serial.c **** {
+ 594              		.loc 1 309 0
+ 595              		.cfi_startproc
+ 596              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  /tmp/ccMH51UR.s 			page 17
+
+
+ 597              		@ frame_needed = 1, uses_anonymous_args = 0
+ 598 0000 80B5     		push	{r7, lr}
+ 599              		.cfi_def_cfa_offset 8
+ 600              		.cfi_offset 7, -8
+ 601              		.cfi_offset 14, -4
+ 602 0002 82B0     		sub	sp, sp, #8
+ 603              		.cfi_def_cfa_offset 16
+ 604 0004 00AF     		add	r7, sp, #0
+ 605              		.cfi_def_cfa_register 7
+ 606 0006 0346     		mov	r3, r0
+ 607 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 310:../common/usb_serial.c **** 	if (!fBulkInBusy && (fifo_avail(&txfifo) != 0)) {
+ 608              		.loc 1 310 0
+ 609 000a 084B     		ldr	r3, .L33
+ 610 000c 1B68     		ldr	r3, [r3]
+ 611 000e 002B     		cmp	r3, #0
+ 612 0010 09D1     		bne	.L31
+ 613              		.loc 1 310 0 is_stmt 0 discriminator 1
+ 614 0012 0748     		ldr	r0, .L33+4
+ 615 0014 FFF7FEFF 		bl	fifo_avail
+ 616 0018 0346     		mov	r3, r0
+ 617 001a 002B     		cmp	r3, #0
+ 618 001c 03D0     		beq	.L31
+ 311:../common/usb_serial.c **** 		// send first packet
+ 312:../common/usb_serial.c **** 		SendNextBulkIn(BULK_IN_EP, TRUE);
+ 619              		.loc 1 312 0 is_stmt 1
+ 620 001e 8220     		movs	r0, #130
+ 621 0020 0121     		movs	r1, #1
+ 622 0022 FFF7FEFF 		bl	SendNextBulkIn
+ 623              	.L31:
+ 313:../common/usb_serial.c **** 	}
+ 314:../common/usb_serial.c **** }
+ 624              		.loc 1 314 0
+ 625 0026 0837     		adds	r7, r7, #8
+ 626              		.cfi_def_cfa_offset 8
+ 627 0028 BD46     		mov	sp, r7
+ 628              		.cfi_def_cfa_register 13
+ 629              		@ sp needed
+ 630 002a 80BD     		pop	{r7, pc}
+ 631              	.L34:
+ 632              		.align	2
+ 633              	.L33:
+ 634 002c 48000000 		.word	fBulkInBusy
+ 635 0030 50010000 		.word	txfifo
+ 636              		.cfi_endproc
+ 637              	.LFE4:
+ 639              		.section	.text.USBDevIntHandler,"ax",%progbits
+ 640              		.align	2
+ 641              		.thumb
+ 642              		.thumb_func
+ 644              	USBDevIntHandler:
+ 645              	.LFB5:
+ 315:../common/usb_serial.c **** 
+ 316:../common/usb_serial.c **** /**
+ 317:../common/usb_serial.c **** 	USB device status handler
+ 318:../common/usb_serial.c **** 	
+ 319:../common/usb_serial.c **** 	Resets state machine when a USB reset is received.
+ARM GAS  /tmp/ccMH51UR.s 			page 18
+
+
+ 320:../common/usb_serial.c ****  */
+ 321:../common/usb_serial.c **** static void USBDevIntHandler(U8 bDevStatus)
+ 322:../common/usb_serial.c **** {
+ 646              		.loc 1 322 0
+ 647              		.cfi_startproc
+ 648              		@ args = 0, pretend = 0, frame = 8
+ 649              		@ frame_needed = 1, uses_anonymous_args = 0
+ 650              		@ link register save eliminated.
+ 651 0000 80B4     		push	{r7}
+ 652              		.cfi_def_cfa_offset 4
+ 653              		.cfi_offset 7, -4
+ 654 0002 83B0     		sub	sp, sp, #12
+ 655              		.cfi_def_cfa_offset 16
+ 656 0004 00AF     		add	r7, sp, #0
+ 657              		.cfi_def_cfa_register 7
+ 658 0006 0346     		mov	r3, r0
+ 659 0008 FB71     		strb	r3, [r7, #7]
+ 323:../common/usb_serial.c **** 	if ((bDevStatus & DEV_STATUS_RESET) != 0) {
+ 660              		.loc 1 323 0
+ 661 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 662 000c 03F01003 		and	r3, r3, #16
+ 663 0010 002B     		cmp	r3, #0
+ 664 0012 02D0     		beq	.L35
+ 324:../common/usb_serial.c **** 		fBulkInBusy = FALSE;
+ 665              		.loc 1 324 0
+ 666 0014 034B     		ldr	r3, .L37
+ 667 0016 0022     		movs	r2, #0
+ 668 0018 1A60     		str	r2, [r3]
+ 669              	.L35:
+ 325:../common/usb_serial.c **** 	}
+ 326:../common/usb_serial.c **** }
+ 670              		.loc 1 326 0
+ 671 001a 0C37     		adds	r7, r7, #12
+ 672              		.cfi_def_cfa_offset 4
+ 673 001c BD46     		mov	sp, r7
+ 674              		.cfi_def_cfa_register 13
+ 675              		@ sp needed
+ 676 001e 5DF8047B 		ldr	r7, [sp], #4
+ 677              		.cfi_restore 7
+ 678              		.cfi_def_cfa_offset 0
+ 679 0022 7047     		bx	lr
+ 680              	.L38:
+ 681              		.align	2
+ 682              	.L37:
+ 683 0024 48000000 		.word	fBulkInBusy
+ 684              		.cfi_endproc
+ 685              	.LFE5:
+ 687              		.section	.text.VCOM_init,"ax",%progbits
+ 688              		.align	2
+ 689              		.global	VCOM_init
+ 690              		.thumb
+ 691              		.thumb_func
+ 693              	VCOM_init:
+ 694              	.LFB6:
+ 327:../common/usb_serial.c **** 
+ 328:../common/usb_serial.c **** /**
+ 329:../common/usb_serial.c **** 	Initialises the VCOM port.
+ARM GAS  /tmp/ccMH51UR.s 			page 19
+
+
+ 330:../common/usb_serial.c **** 	Call this function before using VCOM_putchar or VCOM_getchar
+ 331:../common/usb_serial.c ****  */
+ 332:../common/usb_serial.c **** void VCOM_init(void)
+ 333:../common/usb_serial.c **** {
+ 695              		.loc 1 333 0
+ 696              		.cfi_startproc
+ 697              		@ args = 0, pretend = 0, frame = 0
+ 698              		@ frame_needed = 1, uses_anonymous_args = 0
+ 699 0000 80B5     		push	{r7, lr}
+ 700              		.cfi_def_cfa_offset 8
+ 701              		.cfi_offset 7, -8
+ 702              		.cfi_offset 14, -4
+ 703 0002 00AF     		add	r7, sp, #0
+ 704              		.cfi_def_cfa_register 7
+ 334:../common/usb_serial.c **** 	fifo_init(&txfifo, txdata);
+ 705              		.loc 1 334 0
+ 706 0004 0748     		ldr	r0, .L40
+ 707 0006 0849     		ldr	r1, .L40+4
+ 708 0008 FFF7FEFF 		bl	fifo_init
+ 335:../common/usb_serial.c **** 	fifo_init(&rxfifo, rxdata);
+ 709              		.loc 1 335 0
+ 710 000c 0748     		ldr	r0, .L40+8
+ 711 000e 0849     		ldr	r1, .L40+12
+ 712 0010 FFF7FEFF 		bl	fifo_init
+ 336:../common/usb_serial.c **** 	fBulkInBusy = FALSE;
+ 713              		.loc 1 336 0
+ 714 0014 074B     		ldr	r3, .L40+16
+ 715 0016 0022     		movs	r2, #0
+ 716 0018 1A60     		str	r2, [r3]
+ 337:../common/usb_serial.c **** 	fChainDone = TRUE;
+ 717              		.loc 1 337 0
+ 718 001a 074B     		ldr	r3, .L40+20
+ 719 001c 0122     		movs	r2, #1
+ 720 001e 1A60     		str	r2, [r3]
+ 338:../common/usb_serial.c **** }
+ 721              		.loc 1 338 0
+ 722 0020 80BD     		pop	{r7, pc}
+ 723              	.L41:
+ 724 0022 00BF     		.align	2
+ 725              	.L40:
+ 726 0024 50010000 		.word	txfifo
+ 727 0028 50000000 		.word	txdata
+ 728 002c 5C010000 		.word	rxfifo
+ 729 0030 D0000000 		.word	rxdata
+ 730 0034 48000000 		.word	fBulkInBusy
+ 731 0038 4C000000 		.word	fChainDone
+ 732              		.cfi_endproc
+ 733              	.LFE6:
+ 735              		.section	.text.VCOM_putchar,"ax",%progbits
+ 736              		.align	2
+ 737              		.global	VCOM_putchar
+ 738              		.thumb
+ 739              		.thumb_func
+ 741              	VCOM_putchar:
+ 742              	.LFB7:
+ 339:../common/usb_serial.c **** 
+ 340:../common/usb_serial.c **** /**
+ARM GAS  /tmp/ccMH51UR.s 			page 20
+
+
+ 341:../common/usb_serial.c **** 	Writes one character to VCOM port
+ 342:../common/usb_serial.c **** 	
+ 343:../common/usb_serial.c **** 	@param [in] c character to write
+ 344:../common/usb_serial.c **** 	@returns character written, or EOF if character could not be written
+ 345:../common/usb_serial.c ****  */
+ 346:../common/usb_serial.c **** int VCOM_putchar(int c)
+ 347:../common/usb_serial.c **** {
+ 743              		.loc 1 347 0
+ 744              		.cfi_startproc
+ 745              		@ args = 0, pretend = 0, frame = 8
+ 746              		@ frame_needed = 1, uses_anonymous_args = 0
+ 747 0000 80B5     		push	{r7, lr}
+ 748              		.cfi_def_cfa_offset 8
+ 749              		.cfi_offset 7, -8
+ 750              		.cfi_offset 14, -4
+ 751 0002 82B0     		sub	sp, sp, #8
+ 752              		.cfi_def_cfa_offset 16
+ 753 0004 00AF     		add	r7, sp, #0
+ 754              		.cfi_def_cfa_register 7
+ 755 0006 7860     		str	r0, [r7, #4]
+ 348:../common/usb_serial.c **** 	return fifo_put(&txfifo, c) ? c : EOF;
+ 756              		.loc 1 348 0
+ 757 0008 7B68     		ldr	r3, [r7, #4]
+ 758 000a DBB2     		uxtb	r3, r3
+ 759 000c 0748     		ldr	r0, .L46
+ 760 000e 1946     		mov	r1, r3
+ 761 0010 FFF7FEFF 		bl	fifo_put
+ 762 0014 0346     		mov	r3, r0
+ 763 0016 002B     		cmp	r3, #0
+ 764 0018 01D0     		beq	.L43
+ 765              		.loc 1 348 0 is_stmt 0 discriminator 1
+ 766 001a 7B68     		ldr	r3, [r7, #4]
+ 767 001c 01E0     		b	.L44
+ 768              	.L43:
+ 769              		.loc 1 348 0 discriminator 2
+ 770 001e 4FF0FF33 		mov	r3, #-1
+ 771              	.L44:
+ 349:../common/usb_serial.c **** }
+ 772              		.loc 1 349 0 is_stmt 1 discriminator 4
+ 773 0022 1846     		mov	r0, r3
+ 774 0024 0837     		adds	r7, r7, #8
+ 775              		.cfi_def_cfa_offset 8
+ 776 0026 BD46     		mov	sp, r7
+ 777              		.cfi_def_cfa_register 13
+ 778              		@ sp needed
+ 779 0028 80BD     		pop	{r7, pc}
+ 780              	.L47:
+ 781 002a 00BF     		.align	2
+ 782              	.L46:
+ 783 002c 50010000 		.word	txfifo
+ 784              		.cfi_endproc
+ 785              	.LFE7:
+ 787              		.section	.text.VCOM_getchar,"ax",%progbits
+ 788              		.align	2
+ 789              		.global	VCOM_getchar
+ 790              		.thumb
+ 791              		.thumb_func
+ARM GAS  /tmp/ccMH51UR.s 			page 21
+
+
+ 793              	VCOM_getchar:
+ 794              	.LFB8:
+ 350:../common/usb_serial.c **** 
+ 351:../common/usb_serial.c **** 
+ 352:../common/usb_serial.c **** /**
+ 353:../common/usb_serial.c **** 	Reads one character from VCOM port
+ 354:../common/usb_serial.c **** 	
+ 355:../common/usb_serial.c **** 	@returns character read, or EOF if character could not be read
+ 356:../common/usb_serial.c ****  */
+ 357:../common/usb_serial.c **** int VCOM_getchar(void)
+ 358:../common/usb_serial.c **** {
+ 795              		.loc 1 358 0
+ 796              		.cfi_startproc
+ 797              		@ args = 0, pretend = 0, frame = 8
+ 798              		@ frame_needed = 1, uses_anonymous_args = 0
+ 799 0000 80B5     		push	{r7, lr}
+ 800              		.cfi_def_cfa_offset 8
+ 801              		.cfi_offset 7, -8
+ 802              		.cfi_offset 14, -4
+ 803 0002 82B0     		sub	sp, sp, #8
+ 804              		.cfi_def_cfa_offset 16
+ 805 0004 00AF     		add	r7, sp, #0
+ 806              		.cfi_def_cfa_register 7
+ 359:../common/usb_serial.c **** 	U8 c;
+ 360:../common/usb_serial.c **** 	
+ 361:../common/usb_serial.c **** 	return fifo_get(&rxfifo, &c) ? c : EOF;
+ 807              		.loc 1 361 0
+ 808 0006 FB1D     		adds	r3, r7, #7
+ 809 0008 0748     		ldr	r0, .L52
+ 810 000a 1946     		mov	r1, r3
+ 811 000c FFF7FEFF 		bl	fifo_get
+ 812 0010 0346     		mov	r3, r0
+ 813 0012 002B     		cmp	r3, #0
+ 814 0014 01D0     		beq	.L49
+ 815              		.loc 1 361 0 is_stmt 0 discriminator 1
+ 816 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 817 0018 01E0     		b	.L51
+ 818              	.L49:
+ 819              		.loc 1 361 0 discriminator 2
+ 820 001a 4FF0FF33 		mov	r3, #-1
+ 821              	.L51:
+ 362:../common/usb_serial.c **** }
+ 822              		.loc 1 362 0 is_stmt 1
+ 823 001e 1846     		mov	r0, r3
+ 824 0020 0837     		adds	r7, r7, #8
+ 825              		.cfi_def_cfa_offset 8
+ 826 0022 BD46     		mov	sp, r7
+ 827              		.cfi_def_cfa_register 13
+ 828              		@ sp needed
+ 829 0024 80BD     		pop	{r7, pc}
+ 830              	.L53:
+ 831 0026 00BF     		.align	2
+ 832              	.L52:
+ 833 0028 5C010000 		.word	rxfifo
+ 834              		.cfi_endproc
+ 835              	.LFE8:
+ 837              		.section	.text.USB_IRQHandler,"ax",%progbits
+ARM GAS  /tmp/ccMH51UR.s 			page 22
+
+
+ 838              		.align	2
+ 839              		.global	USB_IRQHandler
+ 840              		.thumb
+ 841              		.thumb_func
+ 843              	USB_IRQHandler:
+ 844              	.LFB9:
+ 363:../common/usb_serial.c **** 
+ 364:../common/usb_serial.c **** void USB_IRQHandler()
+ 365:../common/usb_serial.c **** {
+ 845              		.loc 1 365 0
+ 846              		.cfi_startproc
+ 847              		@ args = 0, pretend = 0, frame = 0
+ 848              		@ frame_needed = 1, uses_anonymous_args = 0
+ 849 0000 80B5     		push	{r7, lr}
+ 850              		.cfi_def_cfa_offset 8
+ 851              		.cfi_offset 7, -8
+ 852              		.cfi_offset 14, -4
+ 853 0002 00AF     		add	r7, sp, #0
+ 854              		.cfi_def_cfa_register 7
+ 366:../common/usb_serial.c **** 	USBHwISR();
+ 855              		.loc 1 366 0
+ 856 0004 FFF7FEFF 		bl	USBHwISR
+ 367:../common/usb_serial.c **** }
+ 857              		.loc 1 367 0
+ 858 0008 80BD     		pop	{r7, pc}
+ 859              		.cfi_endproc
+ 860              	.LFE9:
+ 862 000a 00BF     		.section	.text.usb_serial_init,"ax",%progbits
+ 863              		.align	2
+ 864              		.global	usb_serial_init
+ 865              		.thumb
+ 866              		.thumb_func
+ 868              	usb_serial_init:
+ 869              	.LFB10:
+ 368:../common/usb_serial.c **** 
+ 369:../common/usb_serial.c **** void usb_serial_init()
+ 370:../common/usb_serial.c **** {
+ 870              		.loc 1 370 0
+ 871              		.cfi_startproc
+ 872              		@ args = 0, pretend = 0, frame = 0
+ 873              		@ frame_needed = 1, uses_anonymous_args = 0
+ 874 0000 80B5     		push	{r7, lr}
+ 875              		.cfi_def_cfa_offset 8
+ 876              		.cfi_offset 7, -8
+ 877              		.cfi_offset 14, -4
+ 878 0002 00AF     		add	r7, sp, #0
+ 879              		.cfi_def_cfa_register 7
+ 371:../common/usb_serial.c **** 	// initialise stack
+ 372:../common/usb_serial.c **** 	USBInit();
+ 880              		.loc 1 372 0
+ 881 0004 FFF7FEFF 		bl	USBInit
+ 373:../common/usb_serial.c **** 
+ 374:../common/usb_serial.c **** 	// register descriptors
+ 375:../common/usb_serial.c **** 	USBRegisterDescriptors(abDescriptors);
+ 882              		.loc 1 375 0
+ 883 0008 1248     		ldr	r0, .L56
+ 884 000a FFF7FEFF 		bl	USBRegisterDescriptors
+ARM GAS  /tmp/ccMH51UR.s 			page 23
+
+
+ 376:../common/usb_serial.c **** 
+ 377:../common/usb_serial.c **** 	// register class request handler
+ 378:../common/usb_serial.c **** 	USBRegisterRequestHandler(REQTYPE_TYPE_CLASS, HandleClassRequest, abClassReqData);
+ 885              		.loc 1 378 0
+ 886 000e 0120     		movs	r0, #1
+ 887 0010 1149     		ldr	r1, .L56+4
+ 888 0012 124A     		ldr	r2, .L56+8
+ 889 0014 FFF7FEFF 		bl	USBRegisterRequestHandler
+ 379:../common/usb_serial.c **** 
+ 380:../common/usb_serial.c **** 	// register endpoint handlers
+ 381:../common/usb_serial.c **** 	USBHwRegisterEPIntHandler(INT_IN_EP, NULL);
+ 890              		.loc 1 381 0
+ 891 0018 8120     		movs	r0, #129
+ 892 001a 0021     		movs	r1, #0
+ 893 001c FFF7FEFF 		bl	USBHwRegisterEPIntHandler
+ 382:../common/usb_serial.c **** 	USBHwRegisterEPIntHandler(BULK_IN_EP, BulkIn);
+ 894              		.loc 1 382 0
+ 895 0020 8220     		movs	r0, #130
+ 896 0022 0F49     		ldr	r1, .L56+12
+ 897 0024 FFF7FEFF 		bl	USBHwRegisterEPIntHandler
+ 383:../common/usb_serial.c **** 	USBHwRegisterEPIntHandler(BULK_OUT_EP, BulkOut);
+ 898              		.loc 1 383 0
+ 899 0028 0520     		movs	r0, #5
+ 900 002a 0E49     		ldr	r1, .L56+16
+ 901 002c FFF7FEFF 		bl	USBHwRegisterEPIntHandler
+ 384:../common/usb_serial.c **** 
+ 385:../common/usb_serial.c **** 	// register frame handler
+ 386:../common/usb_serial.c **** 	USBHwRegisterFrameHandler(USBFrameHandler);
+ 902              		.loc 1 386 0
+ 903 0030 0D48     		ldr	r0, .L56+20
+ 904 0032 FFF7FEFF 		bl	USBHwRegisterFrameHandler
+ 387:../common/usb_serial.c **** 
+ 388:../common/usb_serial.c **** 	// register device event handler
+ 389:../common/usb_serial.c **** 	USBHwRegisterDevIntHandler(USBDevIntHandler);
+ 905              		.loc 1 389 0
+ 906 0036 0D48     		ldr	r0, .L56+24
+ 907 0038 FFF7FEFF 		bl	USBHwRegisterDevIntHandler
+ 390:../common/usb_serial.c **** 
+ 391:../common/usb_serial.c **** 	// initialise VCOM
+ 392:../common/usb_serial.c **** 	VCOM_init();
+ 908              		.loc 1 392 0
+ 909 003c FFF7FEFF 		bl	VCOM_init
+ 393:../common/usb_serial.c **** 
+ 394:../common/usb_serial.c **** 	// enable USB interrupts
+ 395:../common/usb_serial.c **** 	ISER0 |= ISER0_ISE_USB;
+ 910              		.loc 1 395 0
+ 911 0040 0B4A     		ldr	r2, .L56+28
+ 912 0042 0B4B     		ldr	r3, .L56+28
+ 913 0044 1B68     		ldr	r3, [r3]
+ 914 0046 43F08073 		orr	r3, r3, #16777216
+ 915 004a 1360     		str	r3, [r2]
+ 396:../common/usb_serial.c **** 
+ 397:../common/usb_serial.c **** 	// connect to bus
+ 398:../common/usb_serial.c **** 	USBHwConnect(TRUE);
+ 916              		.loc 1 398 0
+ 917 004c 0120     		movs	r0, #1
+ 918 004e FFF7FEFF 		bl	USBHwConnect
+ARM GAS  /tmp/ccMH51UR.s 			page 24
+
+
+ 399:../common/usb_serial.c **** }
+ 919              		.loc 1 399 0
+ 920 0052 80BD     		pop	{r7, pc}
+ 921              	.L57:
+ 922              		.align	2
+ 923              	.L56:
+ 924 0054 00000000 		.word	abDescriptors
+ 925 0058 00000000 		.word	HandleClassRequest
+ 926 005c 40000000 		.word	abClassReqData
+ 927 0060 00000000 		.word	BulkIn
+ 928 0064 00000000 		.word	BulkOut
+ 929 0068 00000000 		.word	USBFrameHandler
+ 930 006c 00000000 		.word	USBDevIntHandler
+ 931 0070 00E100E0 		.word	-536813312
+ 932              		.cfi_endproc
+ 933              	.LFE10:
+ 935              		.text
+ 936              	.Letext0:
+ 937              		.file 2 "/usr/lib/gcc/arm-none-eabi/4.9.3/include/stdint-gcc.h"
+ 938              		.file 3 "../common/ubertooth.h"
+ 939              		.file 4 "../common/lpcusb/target/type.h"
+ 940              		.file 5 "../common/lpcusb/target/usbstruct.h"
+ 941              		.file 6 "../common/usb_serial.h"
+ 942              		.file 7 "../common/serial_fifo.h"
+ARM GAS  /tmp/ccMH51UR.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usb_serial.c
+     /tmp/ccMH51UR.s:19     .data:0000000000000000 $d
+     /tmp/ccMH51UR.s:22     .data:0000000000000000 iap_entry
+     /tmp/ccMH51UR.s:27     .data:0000000000000004 LineCoding
+     /tmp/ccMH51UR.s:34     .bss:0000000000000000 $d
+     /tmp/ccMH51UR.s:35     .bss:0000000000000000 abBulkBuf
+     /tmp/ccMH51UR.s:38     .bss:0000000000000040 abClassReqData
+     /tmp/ccMH51UR.s:41     .bss:0000000000000048 fBulkInBusy
+     /tmp/ccMH51UR.s:44     .bss:000000000000004c fChainDone
+     /tmp/ccMH51UR.s:47     .bss:0000000000000050 txdata
+     /tmp/ccMH51UR.s:50     .bss:00000000000000d0 rxdata
+     /tmp/ccMH51UR.s:53     .bss:0000000000000150 txfifo
+     /tmp/ccMH51UR.s:56     .bss:000000000000015c rxfifo
+     /tmp/ccMH51UR.s:59     .rodata:0000000000000000 $d
+     /tmp/ccMH51UR.s:62     .rodata:0000000000000000 abDescriptors
+     /tmp/ccMH51UR.s:274    .text.HandleClassRequest:0000000000000000 $t
+     /tmp/ccMH51UR.s:278    .text.HandleClassRequest:0000000000000000 HandleClassRequest
+     /tmp/ccMH51UR.s:351    .text.HandleClassRequest:0000000000000050 $d
+     /tmp/ccMH51UR.s:356    .text.BulkOut:0000000000000000 $t
+     /tmp/ccMH51UR.s:360    .text.BulkOut:0000000000000000 BulkOut
+     /tmp/ccMH51UR.s:435    .text.BulkOut:0000000000000060 $d
+     /tmp/ccMH51UR.s:441    .text.SendNextBulkIn:0000000000000000 $t
+     /tmp/ccMH51UR.s:445    .text.SendNextBulkIn:0000000000000000 SendNextBulkIn
+     /tmp/ccMH51UR.s:541    .text.SendNextBulkIn:0000000000000078 $d
+     /tmp/ccMH51UR.s:549    .text.BulkIn:0000000000000000 $t
+     /tmp/ccMH51UR.s:553    .text.BulkIn:0000000000000000 BulkIn
+     /tmp/ccMH51UR.s:588    .text.USBFrameHandler:0000000000000000 $t
+     /tmp/ccMH51UR.s:592    .text.USBFrameHandler:0000000000000000 USBFrameHandler
+     /tmp/ccMH51UR.s:634    .text.USBFrameHandler:000000000000002c $d
+     /tmp/ccMH51UR.s:640    .text.USBDevIntHandler:0000000000000000 $t
+     /tmp/ccMH51UR.s:644    .text.USBDevIntHandler:0000000000000000 USBDevIntHandler
+     /tmp/ccMH51UR.s:683    .text.USBDevIntHandler:0000000000000024 $d
+     /tmp/ccMH51UR.s:688    .text.VCOM_init:0000000000000000 $t
+     /tmp/ccMH51UR.s:693    .text.VCOM_init:0000000000000000 VCOM_init
+     /tmp/ccMH51UR.s:726    .text.VCOM_init:0000000000000024 $d
+     /tmp/ccMH51UR.s:736    .text.VCOM_putchar:0000000000000000 $t
+     /tmp/ccMH51UR.s:741    .text.VCOM_putchar:0000000000000000 VCOM_putchar
+     /tmp/ccMH51UR.s:783    .text.VCOM_putchar:000000000000002c $d
+     /tmp/ccMH51UR.s:788    .text.VCOM_getchar:0000000000000000 $t
+     /tmp/ccMH51UR.s:793    .text.VCOM_getchar:0000000000000000 VCOM_getchar
+     /tmp/ccMH51UR.s:833    .text.VCOM_getchar:0000000000000028 $d
+     /tmp/ccMH51UR.s:838    .text.USB_IRQHandler:0000000000000000 $t
+     /tmp/ccMH51UR.s:843    .text.USB_IRQHandler:0000000000000000 USB_IRQHandler
+     /tmp/ccMH51UR.s:863    .text.usb_serial_init:0000000000000000 $t
+     /tmp/ccMH51UR.s:868    .text.usb_serial_init:0000000000000000 usb_serial_init
+     /tmp/ccMH51UR.s:924    .text.usb_serial_init:0000000000000054 $d
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+memcpy
+fifo_free
+USBHwEPRead
+fifo_put
+fifo_get
+USBHwEPWrite
+fifo_avail
+ARM GAS  /tmp/ccMH51UR.s 			page 26
+
+
+fifo_init
+USBHwISR
+USBInit
+USBRegisterDescriptors
+USBRegisterRequestHandler
+USBHwRegisterEPIntHandler
+USBHwRegisterFrameHandler
+USBHwRegisterDevIntHandler
+USBHwConnect

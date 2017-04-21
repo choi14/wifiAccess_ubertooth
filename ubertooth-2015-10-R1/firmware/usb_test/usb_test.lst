@@ -1,0 +1,160 @@
+ARM GAS  /tmp/ccooEZQd.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"usb_test.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.data
+  19              		.align	2
+  22              	iap_entry:
+  23 0000 F11FFF1F 		.word	536813553
+  24              		.section	.text.main,"ax",%progbits
+  25              		.align	2
+  26              		.global	main
+  27              		.thumb
+  28              		.thumb_func
+  30              	main:
+  31              	.LFB0:
+  32              		.file 1 "usb_test.c"
+   1:usb_test.c    **** /*
+   2:usb_test.c    ****  * Copyright 2010 Michael Ossmann
+   3:usb_test.c    ****  *
+   4:usb_test.c    ****  * This file is part of Project Ubertooth.
+   5:usb_test.c    ****  *
+   6:usb_test.c    ****  * This program is free software; you can redistribute it and/or modify
+   7:usb_test.c    ****  * it under the terms of the GNU General Public License as published by
+   8:usb_test.c    ****  * the Free Software Foundation; either version 2, or (at your option)
+   9:usb_test.c    ****  * any later version.
+  10:usb_test.c    ****  *
+  11:usb_test.c    ****  * This program is distributed in the hope that it will be useful,
+  12:usb_test.c    ****  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:usb_test.c    ****  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:usb_test.c    ****  * GNU General Public License for more details.
+  15:usb_test.c    ****  *
+  16:usb_test.c    ****  * You should have received a copy of the GNU General Public License
+  17:usb_test.c    ****  * along with this program; see the file COPYING.  If not, write to
+  18:usb_test.c    ****  * the Free Software Foundation, Inc., 51 Franklin Street,
+  19:usb_test.c    ****  * Boston, MA 02110-1301, USA.
+  20:usb_test.c    ****  */
+  21:usb_test.c    **** 
+  22:usb_test.c    **** #include "ubertooth.h"
+  23:usb_test.c    **** #include "usb_serial.h"
+  24:usb_test.c    **** 
+  25:usb_test.c    **** int main()
+  26:usb_test.c    **** {
+  33              		.loc 1 26 0
+  34              		.cfi_startproc
+ARM GAS  /tmp/ccooEZQd.s 			page 2
+
+
+  35              		@ args = 0, pretend = 0, frame = 8
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 80B5     		push	{r7, lr}
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 82B0     		sub	sp, sp, #8
+  42              		.cfi_def_cfa_offset 16
+  43 0004 00AF     		add	r7, sp, #0
+  44              		.cfi_def_cfa_register 7
+  27:usb_test.c    **** 	int c;
+  28:usb_test.c    **** 
+  29:usb_test.c    **** 	ubertooth_init();
+  45              		.loc 1 29 0
+  46 0006 FFF7FEFF 		bl	ubertooth_init
+  30:usb_test.c    **** 	usb_serial_init();
+  47              		.loc 1 30 0
+  48 000a FFF7FEFF 		bl	usb_serial_init
+  49              	.L5:
+  31:usb_test.c    **** 
+  32:usb_test.c    **** 	/*
+  33:usb_test.c    **** 	 * for each character received over USB serial connection, echo the
+  34:usb_test.c    **** 	 * character back over USB serial and toggle USRLED
+  35:usb_test.c    **** 	 */
+  36:usb_test.c    **** 	while (1) {
+  37:usb_test.c    **** 		c = VCOM_getchar();
+  50              		.loc 1 37 0
+  51 000e FFF7FEFF 		bl	VCOM_getchar
+  52 0012 7860     		str	r0, [r7, #4]
+  38:usb_test.c    **** 		if (c != EOF) {
+  53              		.loc 1 38 0
+  54 0014 7B68     		ldr	r3, [r7, #4]
+  55 0016 B3F1FF3F 		cmp	r3, #-1
+  56 001a 0FD0     		beq	.L2
+  39:usb_test.c    **** 			/* toggle USRLED */
+  40:usb_test.c    **** 			if (USRLED)
+  57              		.loc 1 40 0
+  58 001c 084B     		ldr	r3, .L6
+  59 001e 1B68     		ldr	r3, [r3]
+  60 0020 03F00203 		and	r3, r3, #2
+  61 0024 002B     		cmp	r3, #0
+  62 0026 03D0     		beq	.L3
+  41:usb_test.c    **** 				USRLED_CLR;
+  63              		.loc 1 41 0
+  64 0028 064B     		ldr	r3, .L6+4
+  65 002a 0222     		movs	r2, #2
+  66 002c 1A60     		str	r2, [r3]
+  67 002e 02E0     		b	.L4
+  68              	.L3:
+  42:usb_test.c    **** 			else
+  43:usb_test.c    **** 				USRLED_SET;
+  69              		.loc 1 43 0
+  70 0030 054B     		ldr	r3, .L6+8
+  71 0032 0222     		movs	r2, #2
+  72 0034 1A60     		str	r2, [r3]
+  73              	.L4:
+  44:usb_test.c    **** 			VCOM_putchar(c);
+ARM GAS  /tmp/ccooEZQd.s 			page 3
+
+
+  74              		.loc 1 44 0
+  75 0036 7868     		ldr	r0, [r7, #4]
+  76 0038 FFF7FEFF 		bl	VCOM_putchar
+  77              	.L2:
+  45:usb_test.c    **** 		}
+  46:usb_test.c    **** 	}
+  78              		.loc 1 46 0
+  79 003c E7E7     		b	.L5
+  80              	.L7:
+  81 003e 00BF     		.align	2
+  82              	.L6:
+  83 0040 34C00920 		.word	537509940
+  84 0044 3CC00920 		.word	537509948
+  85 0048 38C00920 		.word	537509944
+  86              		.cfi_endproc
+  87              	.LFE0:
+  89              		.text
+  90              	.Letext0:
+  91              		.file 2 "/usr/lib/gcc/arm-none-eabi/4.9.3/include/stdint-gcc.h"
+  92              		.file 3 "../common/ubertooth.h"
+ARM GAS  /tmp/ccooEZQd.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usb_test.c
+     /tmp/ccooEZQd.s:19     .data:0000000000000000 $d
+     /tmp/ccooEZQd.s:22     .data:0000000000000000 iap_entry
+     /tmp/ccooEZQd.s:25     .text.main:0000000000000000 $t
+     /tmp/ccooEZQd.s:30     .text.main:0000000000000000 main
+     /tmp/ccooEZQd.s:83     .text.main:0000000000000040 $d
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+ubertooth_init
+usb_serial_init
+VCOM_getchar
+VCOM_putchar

@@ -1,0 +1,224 @@
+ARM GAS  /tmp/ccUla9be.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"LPC17xx_Startup.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.Reset_Handler,"ax",%progbits
+  19              		.align	2
+  20              		.global	Reset_Handler
+  21              		.thumb
+  22              		.thumb_func
+  24              	Reset_Handler:
+  25              	.LFB0:
+  26              		.file 1 "../common/LPC17xx_Startup.c"
+   1:../common/LPC17xx_Startup.c **** /*
+   2:../common/LPC17xx_Startup.c ****  * Copyright 2010, 2011 Michael Ossmann
+   3:../common/LPC17xx_Startup.c ****  *
+   4:../common/LPC17xx_Startup.c ****  * This file is part of Project Ubertooth.
+   5:../common/LPC17xx_Startup.c ****  *
+   6:../common/LPC17xx_Startup.c ****  * This program is free software; you can redistribute it and/or modify
+   7:../common/LPC17xx_Startup.c ****  * it under the terms of the GNU General Public License as published by
+   8:../common/LPC17xx_Startup.c ****  * the Free Software Foundation; either version 2, or (at your option)
+   9:../common/LPC17xx_Startup.c ****  * any later version.
+  10:../common/LPC17xx_Startup.c ****  *
+  11:../common/LPC17xx_Startup.c ****  * This program is distributed in the hope that it will be useful,
+  12:../common/LPC17xx_Startup.c ****  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:../common/LPC17xx_Startup.c ****  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:../common/LPC17xx_Startup.c ****  * GNU General Public License for more details.
+  15:../common/LPC17xx_Startup.c ****  *
+  16:../common/LPC17xx_Startup.c ****  * You should have received a copy of the GNU General Public License
+  17:../common/LPC17xx_Startup.c ****  * along with this program; see the file COPYING.  If not, write to
+  18:../common/LPC17xx_Startup.c ****  * the Free Software Foundation, Inc., 51 Franklin Street,
+  19:../common/LPC17xx_Startup.c ****  * Boston, MA 02110-1301, USA.
+  20:../common/LPC17xx_Startup.c ****  */
+  21:../common/LPC17xx_Startup.c **** /*
+  22:../common/LPC17xx_Startup.c ****   Copyright 2010-07 By Opendous Inc. (www.MicropendousX.org)
+  23:../common/LPC17xx_Startup.c ****   NVIC handler info copied from NXP User Manual UM10360
+  24:../common/LPC17xx_Startup.c **** 
+  25:../common/LPC17xx_Startup.c ****   Start-up code for LPC17xx.  See TODOs for
+  26:../common/LPC17xx_Startup.c ****   modification instructions.
+  27:../common/LPC17xx_Startup.c **** 
+  28:../common/LPC17xx_Startup.c ****   Permission to use, copy, modify, and distribute this software
+  29:../common/LPC17xx_Startup.c ****   and its documentation for any purpose and without fee is hereby
+  30:../common/LPC17xx_Startup.c ****   granted, provided that the above copyright notice appear in all
+  31:../common/LPC17xx_Startup.c ****   copies and that both that the copyright notice and this
+  32:../common/LPC17xx_Startup.c ****   permission notice and warranty disclaimer appear in supporting
+ARM GAS  /tmp/ccUla9be.s 			page 2
+
+
+  33:../common/LPC17xx_Startup.c ****   documentation, and that the name of the author not be used in
+  34:../common/LPC17xx_Startup.c ****   advertising or publicity pertaining to distribution of the
+  35:../common/LPC17xx_Startup.c ****   software without specific, written prior permission.
+  36:../common/LPC17xx_Startup.c **** 
+  37:../common/LPC17xx_Startup.c ****   The author disclaim all warranties with regard to this
+  38:../common/LPC17xx_Startup.c ****   software, including all implied warranties of merchantability
+  39:../common/LPC17xx_Startup.c ****   and fitness.  In no event shall the author be liable for any
+  40:../common/LPC17xx_Startup.c ****   special, indirect or consequential damages or any damages
+  41:../common/LPC17xx_Startup.c ****   whatsoever resulting from loss of use, data or profits, whether
+  42:../common/LPC17xx_Startup.c ****   in an action of contract, negligence or other tortious action,
+  43:../common/LPC17xx_Startup.c ****   arising out of or in connection with the use or performance of
+  44:../common/LPC17xx_Startup.c ****   this software.
+  45:../common/LPC17xx_Startup.c **** */
+  46:../common/LPC17xx_Startup.c **** 
+  47:../common/LPC17xx_Startup.c **** #include <lpc17.h>
+  48:../common/LPC17xx_Startup.c **** 
+  49:../common/LPC17xx_Startup.c **** /* Reset_Handler variables defined in linker script */
+  50:../common/LPC17xx_Startup.c **** extern unsigned long _interrupt_vector_table;
+  51:../common/LPC17xx_Startup.c **** extern unsigned long _data;
+  52:../common/LPC17xx_Startup.c **** extern unsigned long _edata;
+  53:../common/LPC17xx_Startup.c **** extern unsigned long _etext;
+  54:../common/LPC17xx_Startup.c **** extern unsigned long _bss;
+  55:../common/LPC17xx_Startup.c **** extern unsigned long _ebss;
+  56:../common/LPC17xx_Startup.c **** 
+  57:../common/LPC17xx_Startup.c **** extern void __libc_init_array(void);
+  58:../common/LPC17xx_Startup.c **** extern int main(void);
+  59:../common/LPC17xx_Startup.c **** 
+  60:../common/LPC17xx_Startup.c **** /* Reset Handler */
+  61:../common/LPC17xx_Startup.c **** void Reset_Handler(void)
+  62:../common/LPC17xx_Startup.c **** {
+  27              		.loc 1 62 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 82B0     		sub	sp, sp, #8
+  36              		.cfi_def_cfa_offset 16
+  37 0004 00AF     		add	r7, sp, #0
+  38              		.cfi_def_cfa_register 7
+  63:../common/LPC17xx_Startup.c ****     unsigned long *src, *dest;
+  64:../common/LPC17xx_Startup.c **** 
+  65:../common/LPC17xx_Startup.c **** 	// Copy the data segment initializers from flash to SRAM
+  66:../common/LPC17xx_Startup.c **** 	src = &_etext;
+  39              		.loc 1 66 0
+  40 0006 124B     		ldr	r3, .L7
+  41 0008 7B60     		str	r3, [r7, #4]
+  67:../common/LPC17xx_Startup.c **** 	for(dest = &_data; dest < &_edata; )
+  42              		.loc 1 67 0
+  43 000a 124B     		ldr	r3, .L7+4
+  44 000c 3B60     		str	r3, [r7]
+  45 000e 07E0     		b	.L2
+  46              	.L3:
+  68:../common/LPC17xx_Startup.c **** 	{
+  69:../common/LPC17xx_Startup.c **** 		*dest++ = *src++;
+ARM GAS  /tmp/ccUla9be.s 			page 3
+
+
+  47              		.loc 1 69 0
+  48 0010 3B68     		ldr	r3, [r7]
+  49 0012 1A1D     		adds	r2, r3, #4
+  50 0014 3A60     		str	r2, [r7]
+  51 0016 7A68     		ldr	r2, [r7, #4]
+  52 0018 111D     		adds	r1, r2, #4
+  53 001a 7960     		str	r1, [r7, #4]
+  54 001c 1268     		ldr	r2, [r2]
+  55 001e 1A60     		str	r2, [r3]
+  56              	.L2:
+  67:../common/LPC17xx_Startup.c **** 	for(dest = &_data; dest < &_edata; )
+  57              		.loc 1 67 0 discriminator 1
+  58 0020 3B68     		ldr	r3, [r7]
+  59 0022 0D4A     		ldr	r2, .L7+8
+  60 0024 9342     		cmp	r3, r2
+  61 0026 F3D3     		bcc	.L3
+  70:../common/LPC17xx_Startup.c **** 	}
+  71:../common/LPC17xx_Startup.c **** 
+  72:../common/LPC17xx_Startup.c **** 	// Initialize the .bss segment of memory to zeros
+  73:../common/LPC17xx_Startup.c **** 	src = &_bss;
+  62              		.loc 1 73 0
+  63 0028 0C4B     		ldr	r3, .L7+12
+  64 002a 7B60     		str	r3, [r7, #4]
+  74:../common/LPC17xx_Startup.c **** 	while (src < &_ebss)
+  65              		.loc 1 74 0
+  66 002c 04E0     		b	.L4
+  67              	.L5:
+  75:../common/LPC17xx_Startup.c **** 	{
+  76:../common/LPC17xx_Startup.c **** 		*src++ = 0;
+  68              		.loc 1 76 0
+  69 002e 7B68     		ldr	r3, [r7, #4]
+  70 0030 1A1D     		adds	r2, r3, #4
+  71 0032 7A60     		str	r2, [r7, #4]
+  72 0034 0022     		movs	r2, #0
+  73 0036 1A60     		str	r2, [r3]
+  74              	.L4:
+  74:../common/LPC17xx_Startup.c **** 	while (src < &_ebss)
+  75              		.loc 1 74 0
+  76 0038 7B68     		ldr	r3, [r7, #4]
+  77 003a 094A     		ldr	r2, .L7+16
+  78 003c 9342     		cmp	r3, r2
+  79 003e F6D3     		bcc	.L5
+  77:../common/LPC17xx_Startup.c **** 	}
+  78:../common/LPC17xx_Startup.c **** 
+  79:../common/LPC17xx_Startup.c ****     __libc_init_array();
+  80              		.loc 1 79 0
+  81 0040 FFF7FEFF 		bl	__libc_init_array
+  80:../common/LPC17xx_Startup.c ****     
+  81:../common/LPC17xx_Startup.c ****     // Set the vector table location.
+  82:../common/LPC17xx_Startup.c ****     SCB_VTOR = &_interrupt_vector_table;
+  82              		.loc 1 82 0
+  83 0044 074B     		ldr	r3, .L7+20
+  84 0046 084A     		ldr	r2, .L7+24
+  85 0048 1A60     		str	r2, [r3]
+  83:../common/LPC17xx_Startup.c ****     
+  84:../common/LPC17xx_Startup.c **** 	main();
+  86              		.loc 1 84 0
+ARM GAS  /tmp/ccUla9be.s 			page 4
+
+
+  87 004a FFF7FEFF 		bl	main
+  88              	.L6:
+  85:../common/LPC17xx_Startup.c **** 
+  86:../common/LPC17xx_Startup.c **** 	// In case main() fails, have something to breakpoint
+  87:../common/LPC17xx_Startup.c **** 	while (1) {;}
+  89              		.loc 1 87 0 discriminator 1
+  90 004e FEE7     		b	.L6
+  91              	.L8:
+  92              		.align	2
+  93              	.L7:
+  94 0050 00000000 		.word	_etext
+  95 0054 00000000 		.word	_data
+  96 0058 00000000 		.word	_edata
+  97 005c 00000000 		.word	_bss
+  98 0060 00000000 		.word	_ebss
+  99 0064 08ED00E0 		.word	-536810232
+ 100 0068 00000000 		.word	_interrupt_vector_table
+ 101              		.cfi_endproc
+ 102              	.LFE0:
+ 104              		.text
+ 105              	.Letext0:
+ 106              		.file 2 "/usr/lib/gcc/arm-none-eabi/4.9.3/include/stdint-gcc.h"
+ARM GAS  /tmp/ccUla9be.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 LPC17xx_Startup.c
+     /tmp/ccUla9be.s:19     .text.Reset_Handler:0000000000000000 $t
+     /tmp/ccUla9be.s:24     .text.Reset_Handler:0000000000000000 Reset_Handler
+     /tmp/ccUla9be.s:94     .text.Reset_Handler:0000000000000050 $d
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+__libc_init_array
+main
+_etext
+_data
+_edata
+_bss
+_ebss
+_interrupt_vector_table

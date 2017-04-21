@@ -1,0 +1,13 @@
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.d
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.lst
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.o
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.bin
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.dfu
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.elf
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.hex
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.lss
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.map
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.srec
+ubertooth-2015-10-R1/firmware/bluetooth_rxtx/*.sym
+ubertooth-2015-10-R1/host/build/
+ubertooth-2015-10-R1/ubertooth-one-firmware-bin/

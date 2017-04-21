@@ -1,0 +1,13 @@
+#!/bin/bash
+while true;do
+	sleep 2
+	UTIL=$(sudo cat /sys/kernel/debug/ieee80211/phy0/jychoi/chan_util)
+	NUM=$(sudo cat /sys/kernel/debug/ieee80211/phy0/jychoi/chan_num)
+	READY=$(sudo cat /sys/kernel/debug/ieee80211/phy0/jychoi/chan_ready)
+	printf -v hNUM "%x" "${NUM}"
+	printf -v hUTIL "%x" "${UTIL}"
+	if [ ${READY} -eq 1 ]; then
+		echo ubertooth command ${UTIL}:${hUTIL} ${NUM}:${hNUM} ${READY}
+		echo 0 > /sys/kernel/debug/ieee80211/phy0/jychoi/chan_ready
+	fi
+done
