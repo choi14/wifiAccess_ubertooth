@@ -884,7 +884,7 @@ OUTPUT(assembly_test.elf elf32-littlearm)
  .debug_line    0x0000000000001b3d       0xbb /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memcpy.o)
  .debug_line    0x0000000000001bf8       0xf2 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
 
-.debug_str      0x0000000000000000     0x1f41
+.debug_str      0x0000000000000000     0x1ef8
  .debug_str     0x0000000000000000      0x1b8 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
                                         0x1f8 (size before relaxing)
  .debug_str     0x00000000000001b8       0xca /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
@@ -913,9 +913,9 @@ OUTPUT(assembly_test.elf elf32-littlearm)
                                         0x1c9 (size before relaxing)
  .debug_str     0x00000000000017ba      0x3ea ../common/lpcusb/target/usbhw_lpc.o
                                         0x5e6 (size before relaxing)
- .debug_str     0x0000000000001ba4      0x2f6 ../common/lpcusb/target/usbstdreq.o
-                                        0x496 (size before relaxing)
- .debug_str     0x0000000000001e9a       0xa7 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+ .debug_str     0x0000000000001ba4      0x2ad ../common/lpcusb/target/usbstdreq.o
+                                        0x49c (size before relaxing)
+ .debug_str     0x0000000000001e51       0xa7 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
                                         0x1c8 (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x1170

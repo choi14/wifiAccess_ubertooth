@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccpYvgZ5.s 			page 1
+ARM GAS  /tmp/ccpHUuix.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccpYvgZ5.s 			page 1
   26:../common/lpcusb/target/usbinit.c **** */
   27:../common/lpcusb/target/usbinit.c **** 
   28:../common/lpcusb/target/usbinit.c **** 
-ARM GAS  /tmp/ccpYvgZ5.s 			page 2
+ARM GAS  /tmp/ccpHUuix.s 			page 2
 
 
   29:../common/lpcusb/target/usbinit.c **** /** @file
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccpYvgZ5.s 			page 1
   59              		.global	USBInit
   60              		.thumb
   61              		.thumb_func
-ARM GAS  /tmp/ccpYvgZ5.s 			page 3
+ARM GAS  /tmp/ccpHUuix.s 			page 3
 
 
   63              	USBInit:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccpYvgZ5.s 			page 1
   94 0028 4021     		movs	r1, #64
   95 002a FFF7FEFF 		bl	USBHwEPConfig
   78:../common/lpcusb/target/usbinit.c **** 	
-ARM GAS  /tmp/ccpYvgZ5.s 			page 4
+ARM GAS  /tmp/ccpHUuix.s 			page 4
 
 
   79:../common/lpcusb/target/usbinit.c **** 	// register standard request handler
@@ -208,18 +208,18 @@ ARM GAS  /tmp/ccpYvgZ5.s 			page 1
  116              		.text
  117              	.Letext0:
  118              		.file 2 "../common/lpcusb/target/type.h"
-ARM GAS  /tmp/ccpYvgZ5.s 			page 5
+ARM GAS  /tmp/ccpHUuix.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbinit.c
-     /tmp/ccpYvgZ5.s:19     .bss:0000000000000000 $d
-     /tmp/ccpYvgZ5.s:20     .bss:0000000000000000 abStdReqData
-     /tmp/ccpYvgZ5.s:23     .text.HandleUsbReset:0000000000000000 $t
-     /tmp/ccpYvgZ5.s:27     .text.HandleUsbReset:0000000000000000 HandleUsbReset
-     /tmp/ccpYvgZ5.s:58     .text.USBInit:0000000000000000 $t
-     /tmp/ccpYvgZ5.s:63     .text.USBInit:0000000000000000 USBInit
-     /tmp/ccpYvgZ5.s:109    .text.USBInit:0000000000000040 $d
+     /tmp/ccpHUuix.s:19     .bss:0000000000000000 $d
+     /tmp/ccpHUuix.s:20     .bss:0000000000000000 abStdReqData
+     /tmp/ccpHUuix.s:23     .text.HandleUsbReset:0000000000000000 $t
+     /tmp/ccpHUuix.s:27     .text.HandleUsbReset:0000000000000000 HandleUsbReset
+     /tmp/ccpHUuix.s:58     .text.USBInit:0000000000000000 $t
+     /tmp/ccpHUuix.s:63     .text.USBInit:0000000000000000 USBInit
+     /tmp/ccpHUuix.s:109    .text.USBInit:0000000000000040 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

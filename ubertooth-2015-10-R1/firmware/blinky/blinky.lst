@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cccPVn6Y.s 			page 1
+ARM GAS  /tmp/cc1GtwHl.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cccPVn6Y.s 			page 1
   33              		.loc 1 25 0
   34              		.cfi_startproc
   35              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cccPVn6Y.s 			page 2
+ARM GAS  /tmp/cc1GtwHl.s 			page 2
 
 
   36              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cccPVn6Y.s 			page 1
   78              	.L4:
   79 003e 00BF     		.align	2
   80              	.L3:
-ARM GAS  /tmp/cccPVn6Y.s 			page 3
+ARM GAS  /tmp/cc1GtwHl.s 			page 3
 
 
   81 0040 38C00920 		.word	537509944
@@ -129,16 +129,16 @@ ARM GAS  /tmp/cccPVn6Y.s 			page 1
   87              	.Letext0:
   88              		.file 2 "/usr/lib/gcc/arm-none-eabi/4.9.3/include/stdint-gcc.h"
   89              		.file 3 "../common/ubertooth.h"
-ARM GAS  /tmp/cccPVn6Y.s 			page 4
+ARM GAS  /tmp/cc1GtwHl.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 blinky.c
-     /tmp/cccPVn6Y.s:19     .data:0000000000000000 $d
-     /tmp/cccPVn6Y.s:22     .data:0000000000000000 iap_entry
-     /tmp/cccPVn6Y.s:25     .text.main:0000000000000000 $t
-     /tmp/cccPVn6Y.s:30     .text.main:0000000000000000 main
-     /tmp/cccPVn6Y.s:81     .text.main:0000000000000040 $d
+     /tmp/cc1GtwHl.s:19     .data:0000000000000000 $d
+     /tmp/cc1GtwHl.s:22     .data:0000000000000000 iap_entry
+     /tmp/cc1GtwHl.s:25     .text.main:0000000000000000 $t
+     /tmp/cc1GtwHl.s:30     .text.main:0000000000000000 main
+     /tmp/cc1GtwHl.s:81     .text.main:0000000000000040 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

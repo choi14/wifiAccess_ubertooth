@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccooEZQd.s 			page 1
+ARM GAS  /tmp/ccRvyEj4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccooEZQd.s 			page 1
   26:usb_test.c    **** {
   33              		.loc 1 26 0
   34              		.cfi_startproc
-ARM GAS  /tmp/ccooEZQd.s 			page 2
+ARM GAS  /tmp/ccRvyEj4.s 			page 2
 
 
   35              		@ args = 0, pretend = 0, frame = 8
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccooEZQd.s 			page 1
   72 0034 1A60     		str	r2, [r3]
   73              	.L4:
   44:usb_test.c    **** 			VCOM_putchar(c);
-ARM GAS  /tmp/ccooEZQd.s 			page 3
+ARM GAS  /tmp/ccRvyEj4.s 			page 3
 
 
   74              		.loc 1 44 0
@@ -141,16 +141,16 @@ ARM GAS  /tmp/ccooEZQd.s 			page 1
   90              	.Letext0:
   91              		.file 2 "/usr/lib/gcc/arm-none-eabi/4.9.3/include/stdint-gcc.h"
   92              		.file 3 "../common/ubertooth.h"
-ARM GAS  /tmp/ccooEZQd.s 			page 4
+ARM GAS  /tmp/ccRvyEj4.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usb_test.c
-     /tmp/ccooEZQd.s:19     .data:0000000000000000 $d
-     /tmp/ccooEZQd.s:22     .data:0000000000000000 iap_entry
-     /tmp/ccooEZQd.s:25     .text.main:0000000000000000 $t
-     /tmp/ccooEZQd.s:30     .text.main:0000000000000000 main
-     /tmp/ccooEZQd.s:83     .text.main:0000000000000040 $d
+     /tmp/ccRvyEj4.s:19     .data:0000000000000000 $d
+     /tmp/ccRvyEj4.s:22     .data:0000000000000000 iap_entry
+     /tmp/ccRvyEj4.s:25     .text.main:0000000000000000 $t
+     /tmp/ccRvyEj4.s:30     .text.main:0000000000000000 main
+     /tmp/ccRvyEj4.s:83     .text.main:0000000000000040 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

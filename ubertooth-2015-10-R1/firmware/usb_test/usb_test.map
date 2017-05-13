@@ -814,7 +814,7 @@ OUTPUT(usb_test.elf elf32-littlearm)
  .debug_str     0x0000000000000f38      0x3ea ../common/lpcusb/target/usbhw_lpc.o
                                         0x5e6 (size before relaxing)
  .debug_str     0x0000000000001322      0x2ad ../common/lpcusb/target/usbstdreq.o
-                                        0x496 (size before relaxing)
+                                        0x49c (size before relaxing)
 
 .debug_frame    0x0000000000000000      0xefc
  .debug_frame   0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)

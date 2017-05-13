@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccMvyhAt.s 			page 1
+ARM GAS  /tmp/cc1OyXId.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
   71 000e 6009     		.short	2400
   72              		.global	high_freq
   73              		.align	1
-ARM GAS  /tmp/ccMvyhAt.s 			page 2
+ARM GAS  /tmp/cc1OyXId.s 			page 2
 
 
   76              	high_freq:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
   24:assembly_test.c **** 	Copyright (C) 2006 Bertrik Sikken (bertrik@sikken.nl)
   25:assembly_test.c **** 
   26:assembly_test.c **** 	Redistribution and use in source and binary forms, with or without
-ARM GAS  /tmp/ccMvyhAt.s 			page 3
+ARM GAS  /tmp/cc1OyXId.s 			page 3
 
 
   27:assembly_test.c **** 	modification, are permitted provided that the following conditions are met:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
   81:assembly_test.c ****  * The active buffer is the one with an active DMA transfer.
   82:assembly_test.c ****  * The idle buffer is the one we can read/write between transfers.
   83:assembly_test.c ****  */
-ARM GAS  /tmp/ccMvyhAt.s 			page 4
+ARM GAS  /tmp/cc1OyXId.s 			page 4
 
 
   84:assembly_test.c **** u8 *active_rxbuf = &rxbuf1[0];
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  121 0000 80B4     		push	{r7}
  122              		.cfi_def_cfa_offset 4
  123              		.cfi_offset 7, -4
-ARM GAS  /tmp/ccMvyhAt.s 			page 5
+ARM GAS  /tmp/cc1OyXId.s 			page 5
 
 
  124 0002 00AF     		add	r7, sp, #0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  172 0008 2C4B     		ldr	r3, .L9
  173 000a 1B68     		ldr	r3, [r3]
  174 000c DBB2     		uxtb	r3, r3
-ARM GAS  /tmp/ccMvyhAt.s 			page 6
+ARM GAS  /tmp/cc1OyXId.s 			page 6
 
 
  175 000e 03F07F03 		and	r3, r3, #127
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  218 005a 0222     		movs	r2, #2
  219 005c 1A60     		str	r2, [r3]
  152:assembly_test.c **** 	for (i = 0; i < DMA_SIZE; i++)
-ARM GAS  /tmp/ccMvyhAt.s 			page 7
+ARM GAS  /tmp/cc1OyXId.s 			page 7
 
 
  220              		.loc 1 152 0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  157:assembly_test.c **** 
  158:assembly_test.c **** 	return 1;
  268              		.loc 1 158 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 8
+ARM GAS  /tmp/cc1OyXId.s 			page 8
 
 
  269 00ac 0123     		movs	r3, #1
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  320 0010 FB71     		strb	r3, [r7, #7]
  164:assembly_test.c **** 	u8 t = tail & 0x7F;
  321              		.loc 1 164 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 9
+ARM GAS  /tmp/cc1OyXId.s 			page 9
 
 
  322 0012 124B     		ldr	r3, .L14+4
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  364              		@ sp needed
  365 0054 80BD     		pop	{r7, pc}
  366              	.L15:
-ARM GAS  /tmp/ccMvyhAt.s 			page 10
+ARM GAS  /tmp/cc1OyXId.s 			page 10
 
 
  367 0056 00BF     		.align	2
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  424 002b 07       		.byte	7
  425 002c 05       		.byte	5
  426 002d 05       		.byte	5
-ARM GAS  /tmp/ccMvyhAt.s 			page 11
+ARM GAS  /tmp/cc1OyXId.s 			page 11
 
 
  427 002e 02       		.byte	2
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  481 0064 65       		.byte	101
  482 0065 00       		.byte	0
  483 0066 66       		.byte	102
-ARM GAS  /tmp/ccMvyhAt.s 			page 12
+ARM GAS  /tmp/cc1OyXId.s 			page 12
 
 
  484 0067 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  538 009d 00       		.byte	0
  539 009e 79       		.byte	121
  540 009f 00       		.byte	0
-ARM GAS  /tmp/ccMvyhAt.s 			page 13
+ARM GAS  /tmp/cc1OyXId.s 			page 13
 
 
  541 00a0 5F       		.byte	95
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  188:assembly_test.c **** 	LE_WORD(0xFFFF),		// idVendor
  189:assembly_test.c **** 	LE_WORD(0x0004),		// idProduct
  190:assembly_test.c **** 	LE_WORD(0x0100),		// bcdDevice
-ARM GAS  /tmp/ccMvyhAt.s 			page 14
+ARM GAS  /tmp/cc1OyXId.s 			page 14
 
 
  191:assembly_test.c **** 	0x01,              		// iManufacturer
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  245:assembly_test.c **** 	'/', 0,
  246:assembly_test.c **** 
  247:assembly_test.c **** 	// product string
-ARM GAS  /tmp/ccMvyhAt.s 			page 15
+ARM GAS  /tmp/cc1OyXId.s 			page 15
 
 
  248:assembly_test.c **** 	0x30,
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  613              		.cfi_endproc
  614              	.LFE3:
  616              		.section	.text.usb_bulk_out_handler,"ax",%progbits
-ARM GAS  /tmp/ccMvyhAt.s 			page 16
+ARM GAS  /tmp/cc1OyXId.s 			page 16
 
 
  617              		.align	2
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  665              		.cfi_startproc
  666              		@ args = 0, pretend = 0, frame = 64
  667              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 17
+ARM GAS  /tmp/cc1OyXId.s 			page 17
 
 
  668 0000 80B5     		push	{r7, lr}
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  716 0084 AF040000 		.word	.L45+1
  717 0088 CD040000 		.word	.L46+1
  718 008c 71050000 		.word	.L20+1
-ARM GAS  /tmp/ccMvyhAt.s 			page 18
+ARM GAS  /tmp/cc1OyXId.s 			page 18
 
 
  719 0090 D9040000 		.word	.L47+1
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  295:assembly_test.c **** 	case UBERTOOTH_GET_USRLED:
  296:assembly_test.c **** 		pbData[0] = (USRLED) ? 1 : 0;
  761              		.loc 1 296 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 19
+ARM GAS  /tmp/cc1OyXId.s 			page 19
 
 
  762 00dc 964B     		ldr	r3, .L78+4
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  803 011c 002B     		cmp	r3, #0
  804 011e 14BF     		ite	ne
  805 0120 0123     		movne	r3, #1
-ARM GAS  /tmp/ccMvyhAt.s 			page 20
+ARM GAS  /tmp/cc1OyXId.s 			page 20
 
 
  806 0122 0023     		moveq	r3, #0
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  847 0160 FB6B     		ldr	r3, [r7, #60]
  848 0162 1A70     		strb	r2, [r3]
  321:assembly_test.c **** 		*piLen = 1;
-ARM GAS  /tmp/ccMvyhAt.s 			page 21
+ARM GAS  /tmp/cc1OyXId.s 			page 21
 
 
  849              		.loc 1 321 0
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  890 01a4 1A60     		str	r2, [r3]
  334:assembly_test.c **** 		break;
  891              		.loc 1 334 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 22
+ARM GAS  /tmp/cc1OyXId.s 			page 22
 
 
  892 01a6 E5E1     		b	.L54
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  932 01e6 7A69     		ldr	r2, [r7, #20]
  933 01e8 D2B2     		uxtb	r2, r2
  934 01ea 1A70     		strb	r2, [r3]
-ARM GAS  /tmp/ccMvyhAt.s 			page 23
+ARM GAS  /tmp/cc1OyXId.s 			page 23
 
 
  348:assembly_test.c **** 		pbData[2] = (result[1] >> 8) & 0xFF;
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  976 022e 0846     		mov	r0, r1
  977 0230 1146     		mov	r1, r2
  978 0232 9847     		blx	r3
-ARM GAS  /tmp/ccMvyhAt.s 			page 24
+ARM GAS  /tmp/cc1OyXId.s 			page 24
 
 
  361:assembly_test.c **** 		pbData[0] = result[0] & 0xFF; /* status */
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1025 0280 FB6B     		ldr	r3, [r7, #60]
  1026 0282 0733     		adds	r3, r3, #7
  1027 0284 BA69     		ldr	r2, [r7, #24]
-ARM GAS  /tmp/ccMvyhAt.s 			page 25
+ARM GAS  /tmp/cc1OyXId.s 			page 25
 
 
  1028 0286 120C     		lsrs	r2, r2, #16
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1075 02d6 120A     		lsrs	r2, r2, #8
  1076 02d8 D2B2     		uxtb	r2, r2
  1077 02da 1A70     		strb	r2, [r3]
-ARM GAS  /tmp/ccMvyhAt.s 			page 26
+ARM GAS  /tmp/cc1OyXId.s 			page 26
 
 
  376:assembly_test.c **** 		pbData[15] = (result[4] >> 16) & 0xFF;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1119 031c FB68     		ldr	r3, [r7, #12]
  1120 031e 5B88     		ldrh	r3, [r3, #2]
  1121 0320 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccMvyhAt.s 			page 27
+ARM GAS  /tmp/cc1OyXId.s 			page 27
 
 
  1122 0322 03D0     		beq	.L64
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1166              	.L40:
  398:assembly_test.c **** 
  399:assembly_test.c **** 	case UBERTOOTH_SET_HGM:
-ARM GAS  /tmp/ccMvyhAt.s 			page 28
+ARM GAS  /tmp/cc1OyXId.s 			page 28
 
 
  400:assembly_test.c **** 		if (pSetup->wValue)
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1205 03b0 1A60     		str	r2, [r3]
  415:assembly_test.c **** 		break;
  1206              		.loc 1 415 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 29
+ARM GAS  /tmp/cc1OyXId.s 			page 29
 
 
  1207 03b2 DFE0     		b	.L54
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  433:assembly_test.c **** 
  434:assembly_test.c **** 	case UBERTOOTH_RANGE_CHECK:
  435:assembly_test.c **** 		pbData[0] = rr.valid;
-ARM GAS  /tmp/ccMvyhAt.s 			page 30
+ARM GAS  /tmp/cc1OyXId.s 			page 30
 
 
  1243              		.loc 1 435 0
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  447:assembly_test.c **** 	case UBERTOOTH_GET_MOD:
  448:assembly_test.c **** 		pbData[0] = modulation;
  1286              		.loc 1 448 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 31
+ARM GAS  /tmp/cc1OyXId.s 			page 31
 
 
  1287 0424 5B4B     		ldr	r3, .L80+20
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1329              		.loc 1 460 0
  1330 0466 85E0     		b	.L54
  1331              	.L33:
-ARM GAS  /tmp/ccMvyhAt.s 			page 32
+ARM GAS  /tmp/cc1OyXId.s 			page 32
 
 
  461:assembly_test.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  469:assembly_test.c **** 		command[0] = 57;
  1378              		.loc 1 469 0
  1379 04ae 3923     		movs	r3, #57
-ARM GAS  /tmp/ccMvyhAt.s 			page 33
+ARM GAS  /tmp/cc1OyXId.s 			page 33
 
 
  1380 04b0 7B62     		str	r3, [r7, #36]
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1421              		.loc 1 481 0
  1422 04f6 FB68     		ldr	r3, [r7, #12]
  1423 04f8 9B88     		ldrh	r3, [r3, #4]
-ARM GAS  /tmp/ccMvyhAt.s 			page 34
+ARM GAS  /tmp/cc1OyXId.s 			page 34
 
 
  1424 04fa B3F5406F 		cmp	r3, #3072
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1466 0536 0133     		adds	r3, r3, #1
  1467 0538 0022     		movs	r2, #0
  1468 053a 1A70     		strb	r2, [r3]
-ARM GAS  /tmp/ccMvyhAt.s 			page 35
+ARM GAS  /tmp/cc1OyXId.s 			page 35
 
 
  493:assembly_test.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1509 057c 80BD     		pop	{r7, pc}
  1510              	.L81:
  1511 057e 00BF     		.align	2
-ARM GAS  /tmp/ccMvyhAt.s 			page 36
+ARM GAS  /tmp/cc1OyXId.s 			page 36
 
 
  1512              	.L80:
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  518:assembly_test.c **** 
  519:assembly_test.c **** 	// register endpoints
  520:assembly_test.c **** 	//USBHwRegisterEPIntHandler(BULK_IN_EP, usb_bulk_in_handler);
-ARM GAS  /tmp/ccMvyhAt.s 			page 37
+ARM GAS  /tmp/cc1OyXId.s 			page 37
 
 
  521:assembly_test.c **** 	//USBHwRegisterEPIntHandler(BULK_OUT_EP, usb_bulk_out_handler);
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1592 0004 0D4B     		ldr	r3, .L87
  1593 0006 0222     		movs	r2, #2
  1594 0008 1A60     		str	r2, [r3]
-ARM GAS  /tmp/ccMvyhAt.s 			page 38
+ARM GAS  /tmp/cc1OyXId.s 			page 38
 
 
  542:assembly_test.c **** 	clkn_high = 0;
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1634 0044 0C400040 		.word	1073758220
  1635 0048 18400040 		.word	1073758232
  1636 004c FFFF4FC3 		.word	-1018167297
-ARM GAS  /tmp/ccMvyhAt.s 			page 39
+ARM GAS  /tmp/cc1OyXId.s 			page 39
 
 
  1637 0050 14400040 		.word	1073758228
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1684              		@ sp needed
  1685 0032 5DF8047B 		ldr	r7, [sp], #4
  1686              		.cfi_restore 7
-ARM GAS  /tmp/ccMvyhAt.s 			page 40
+ARM GAS  /tmp/cc1OyXId.s 			page 40
 
 
  1687              		.cfi_def_cfa_offset 0
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1732 0022 314B     		ldr	r3, .L95+16
  1733 0024 0022     		movs	r2, #0
  1734 0026 1A60     		str	r2, [r3]
-ARM GAS  /tmp/ccMvyhAt.s 			page 41
+ARM GAS  /tmp/cc1OyXId.s 			page 41
 
 
  577:assembly_test.c **** 	DMACC4Config = 0;
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  591:assembly_test.c **** 			(0 << 18) |        /* source width 8 bits */
  592:assembly_test.c **** 			(0 << 21) |        /* destination width 8 bits */
  593:assembly_test.c **** 			DMACCxControl_DI | /* destination increment */
-ARM GAS  /tmp/ccMvyhAt.s 			page 42
+ARM GAS  /tmp/cc1OyXId.s 			page 42
 
 
  594:assembly_test.c **** 			DMACCxControl_I;   /* terminal count interrupt enable */
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  613:assembly_test.c **** 
  614:assembly_test.c **** 	/* configure DMA channel 1 */
  615:assembly_test.c **** 	DMACC0SrcAddr = rx_dma_lli1.src;
-ARM GAS  /tmp/ccMvyhAt.s 			page 43
+ARM GAS  /tmp/cc1OyXId.s 			page 43
 
 
  1810              		.loc 1 615 0 is_stmt 1
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1851              		.align	2
  1852              	.L95:
  1853 00d8 C4C00F40 		.word	1074774212
-ARM GAS  /tmp/ccMvyhAt.s 			page 44
+ARM GAS  /tmp/cc1OyXId.s 			page 44
 
 
  1854 00dc 10410050 		.word	1342193936
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  634:assembly_test.c **** 		if (DMACIntTCStat & (1 << 0)) {
  1905              		.loc 1 634 0
  1906 0010 134B     		ldr	r3, .L100+4
-ARM GAS  /tmp/ccMvyhAt.s 			page 45
+ARM GAS  /tmp/cc1OyXId.s 			page 45
 
 
  1907 0012 1B68     		ldr	r3, [r3]
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1952              		.align	2
  1953              	.L100:
  1954 005c 00400050 		.word	1342193664
-ARM GAS  /tmp/ccMvyhAt.s 			page 46
+ARM GAS  /tmp/cc1OyXId.s 			page 46
 
 
  1955 0060 04400050 		.word	1342193668
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  1999 0026 0C4B     		ldr	r3, .L103+12
  2000 0028 1B68     		ldr	r3, [r3]
  2001 002a 43F00103 		orr	r3, r3, #1
-ARM GAS  /tmp/ccMvyhAt.s 			page 47
+ARM GAS  /tmp/cc1OyXId.s 			page 47
 
 
  2002 002e 1360     		str	r3, [r2]
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2049 0002 00AF     		add	r7, sp, #0
  2050              		.cfi_def_cfa_register 7
  665:assembly_test.c **** 	if (modulation == MOD_BT_BASIC_RATE) {
-ARM GAS  /tmp/ccMvyhAt.s 			page 48
+ARM GAS  /tmp/cc1OyXId.s 			page 48
 
 
  2051              		.loc 1 665 0
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2096              		.loc 1 674 0
  2097 0062 1220     		movs	r0, #18
  2098 0064 42F62231 		movw	r1, #11042
-ARM GAS  /tmp/ccMvyhAt.s 			page 49
+ARM GAS  /tmp/cc1OyXId.s 			page 49
 
 
  2099 0068 FFF7FEFF 		bl	cc2400_set
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2142 00b6 FFF7FEFF 		bl	cc2400_status
  2143 00ba 0346     		mov	r3, r0
  2144 00bc 03F00403 		and	r3, r3, #4
-ARM GAS  /tmp/ccMvyhAt.s 			page 50
+ARM GAS  /tmp/cc1OyXId.s 			page 50
 
 
  2145 00c0 002B     		cmp	r3, #0
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2190 0006 1B68     		ldr	r3, [r3]
  2191 0008 002B     		cmp	r3, #0
  2192 000a 1AD1     		bne	.L115
-ARM GAS  /tmp/ccMvyhAt.s 			page 51
+ARM GAS  /tmp/cc1OyXId.s 			page 51
 
 
  697:assembly_test.c **** 		cc2400_set(MANAND,  0x7fff);
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2237 006a 1B88     		ldrh	r3, [r3]	@ movhi
  2238 006c 9BB2     		uxth	r3, r3
  2239 006e 0220     		movs	r0, #2
-ARM GAS  /tmp/ccMvyhAt.s 			page 52
+ARM GAS  /tmp/cc1OyXId.s 			page 52
 
 
  2240 0070 1946     		mov	r1, r3
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2282 00ba 1A60     		str	r2, [r3]
  719:assembly_test.c **** #endif
  720:assembly_test.c **** 	mode = MODE_TX_TEST;
-ARM GAS  /tmp/ccMvyhAt.s 			page 53
+ARM GAS  /tmp/cc1OyXId.s 			page 53
 
 
  2283              		.loc 1 720 0
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2309              		.loc 1 750 0
  2310              		.cfi_startproc
  2311              		@ args = 0, pretend = 0, frame = 80
-ARM GAS  /tmp/ccMvyhAt.s 			page 54
+ARM GAS  /tmp/cc1OyXId.s 			page 54
 
 
  2312              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2358 005e FC63     		str	r4, [r7, #60]
  759:assembly_test.c **** 	u8 rxbuf[len];
  2359              		.loc 1 759 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 55
+ARM GAS  /tmp/cc1OyXId.s 			page 55
 
 
  2360 0060 97F84660 		ldrb	r6, [r7, #70]	@ zero_extendqisi2
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2405 00c2 1146     		mov	r1, r2
  2406 00c4 9847     		blx	r3
  769:assembly_test.c **** 	if ((result[0] & 0xFF) != 0) //status check
-ARM GAS  /tmp/ccMvyhAt.s 			page 56
+ARM GAS  /tmp/cc1OyXId.s 			page 56
 
 
  2407              		.loc 1 769 0
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2453 010e 1B0A     		lsrs	r3, r3, #8
  2454 0110 DAB2     		uxtb	r2, r3
  2455 0112 FB6B     		ldr	r3, [r7, #60]
-ARM GAS  /tmp/ccMvyhAt.s 			page 57
+ARM GAS  /tmp/cc1OyXId.s 			page 57
 
 
  2456 0114 1A72     		strb	r2, [r3, #8]
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2502 0160 1A74     		strb	r2, [r3, #16]
  786:assembly_test.c **** 	txbuf[17] = result[4] & 0xFF;
  2503              		.loc 1 786 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 58
+ARM GAS  /tmp/cc1OyXId.s 			page 58
 
 
  2504 0162 FB69     		ldr	r3, [r7, #28]
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2546 01b6 FFF7FEFF 		bl	cc2400_set
  799:assembly_test.c **** 	cc2400_set(SYNCL,   0x1584);
  2547              		.loc 1 799 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 59
+ARM GAS  /tmp/cc1OyXId.s 			page 59
 
 
  2548 01ba 2C20     		movs	r0, #44
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2592              		.loc 1 809 0
  2593 0214 0023     		movs	r3, #0
  2594 0216 87F84730 		strb	r3, [r7, #71]
-ARM GAS  /tmp/ccMvyhAt.s 			page 60
+ARM GAS  /tmp/cc1OyXId.s 			page 60
 
 
  2595 021a 3EE0     		b	.L128
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2641 026a FFF7FEFF 		bl	cc2400_set8
  816:assembly_test.c **** 				cc2400_set8(FIFOREG, txbuf[j]);
  2642              		.loc 1 816 0 discriminator 3
-ARM GAS  /tmp/ccMvyhAt.s 			page 61
+ARM GAS  /tmp/cc1OyXId.s 			page 61
 
 
  2643 026e BB6C     		ldr	r3, [r7, #72]
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2686 02ba 1A60     		str	r2, [r3]
  824:assembly_test.c **** 	cc2400_strobe(SRFOFF);
  2687              		.loc 1 824 0
-ARM GAS  /tmp/ccMvyhAt.s 			page 62
+ARM GAS  /tmp/cc1OyXId.s 			page 62
 
 
  2688 02bc 6420     		movs	r0, #100
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2734              		.loc 1 832 0
  2735 0310 00BF     		nop
  2736              	.L139:
-ARM GAS  /tmp/ccMvyhAt.s 			page 63
+ARM GAS  /tmp/cc1OyXId.s 			page 63
 
 
  2737              		.loc 1 832 0 is_stmt 0 discriminator 1
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2784 0366 EDDC     		bgt	.L142
  838:assembly_test.c **** 		if (cc2400_status() & STATUS_CRC_OK)
  2785              		.loc 1 838 0 is_stmt 1
-ARM GAS  /tmp/ccMvyhAt.s 			page 64
+ARM GAS  /tmp/cc1OyXId.s 			page 64
 
 
  2786 0368 FFF7FEFF 		bl	cc2400_status
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2830 03c0 F8D1     		bne	.L147
  847:assembly_test.c **** #ifdef UBERTOOTH_ONE
  848:assembly_test.c **** 	PAEN_CLR;
-ARM GAS  /tmp/ccMvyhAt.s 			page 65
+ARM GAS  /tmp/cc1OyXId.s 			page 65
 
 
  2831              		.loc 1 848 0 is_stmt 1
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  862:assembly_test.c **** 		if (rxbuf[i] != txbuf[i])
  2872              		.loc 1 862 0
  2873 0400 7A6B     		ldr	r2, [r7, #52]
-ARM GAS  /tmp/ccMvyhAt.s 			page 66
+ARM GAS  /tmp/cc1OyXId.s 			page 66
 
 
  2874 0402 FB6C     		ldr	r3, [r7, #76]
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  870:assembly_test.c **** }
  2919              		.loc 1 870 0
  2920 0448 5437     		adds	r7, r7, #84
-ARM GAS  /tmp/ccMvyhAt.s 			page 67
+ARM GAS  /tmp/cc1OyXId.s 			page 67
 
 
  2921              		.cfi_def_cfa_offset 36
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  2967 000e BE7B     		ldrb	r6, [r7, #14]	@ zero_extendqisi2
  2968 0010 3446     		mov	r4, r6
  2969 0012 013C     		subs	r4, r4, #1
-ARM GAS  /tmp/ccMvyhAt.s 			page 68
+ARM GAS  /tmp/cc1OyXId.s 			page 68
 
 
  2970 0014 BC60     		str	r4, [r7, #8]
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  890:assembly_test.c **** 		cc2400_set(SYNCH,   0xf9ae);
  3015              		.loc 1 890 0
  3016 007a 2D20     		movs	r0, #45
-ARM GAS  /tmp/ccMvyhAt.s 			page 69
+ARM GAS  /tmp/cc1OyXId.s 			page 69
 
 
  3017 007c 4FF6AE11 		movw	r1, #63918
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3062 00d4 0222     		movs	r2, #2
  3063 00d6 1A60     		str	r2, [r3]
  900:assembly_test.c **** #ifdef UBERTOOTH_ONE
-ARM GAS  /tmp/ccMvyhAt.s 			page 70
+ARM GAS  /tmp/cc1OyXId.s 			page 70
 
 
  901:assembly_test.c **** 		PAEN_SET;
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3108 0122 7A68     		ldr	r2, [r7, #4]
  3109 0124 7B69     		ldr	r3, [r7, #20]
  3110 0126 1344     		add	r3, r3, r2
-ARM GAS  /tmp/ccMvyhAt.s 			page 71
+ARM GAS  /tmp/cc1OyXId.s 			page 71
 
 
  3111 0128 0A46     		mov	r2, r1
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3154              		.loc 1 918 0
  3155 016a 6420     		movs	r0, #100
  3156 016c FFF7FEFF 		bl	cc2400_strobe
-ARM GAS  /tmp/ccMvyhAt.s 			page 72
+ARM GAS  /tmp/cc1OyXId.s 			page 72
 
 
  919:assembly_test.c **** 		while ((cc2400_status() & FS_LOCK));
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  926:assembly_test.c **** 		buf[1] = 1; // reply
  3204              		.loc 1 926 0
  3205 01c6 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccMvyhAt.s 			page 73
+ARM GAS  /tmp/cc1OyXId.s 			page 73
 
 
  3206 01c8 0122     		movs	r2, #1
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3252 0212 3B69     		ldr	r3, [r7, #16]
  3253 0214 1344     		add	r3, r3, r2
  3254 0216 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  /tmp/ccMvyhAt.s 			page 74
+ARM GAS  /tmp/cc1OyXId.s 			page 74
 
 
  3255 0218 7020     		movs	r0, #112
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3297 025a 00BF     		nop
  3298              	.L179:
  3299              		.loc 1 940 0 is_stmt 0 discriminator 1
-ARM GAS  /tmp/ccMvyhAt.s 			page 75
+ARM GAS  /tmp/cc1OyXId.s 			page 75
 
 
  3300 025c FFF7FEFF 		bl	cc2400_status
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3345 000e 1A60     		str	r2, [r3]
  952:assembly_test.c **** 
  953:assembly_test.c **** 	queue_init();
-ARM GAS  /tmp/ccMvyhAt.s 			page 76
+ARM GAS  /tmp/cc1OyXId.s 			page 76
 
 
  3346              		.loc 1 953 0
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  966:assembly_test.c **** 			idle_rxbuf = tmp;
  3388              		.loc 1 966 0
  3389 0052 314A     		ldr	r2, .L195+16
-ARM GAS  /tmp/ccMvyhAt.s 			page 77
+ARM GAS  /tmp/cc1OyXId.s 			page 77
 
 
  3390 0054 7B68     		ldr	r3, [r7, #4]
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3436 00a2 1B68     		ldr	r3, [r3]
  3437 00a4 013B     		subs	r3, r3, #1
  3438 00a6 1E4A     		ldr	r2, .L195+24
-ARM GAS  /tmp/ccMvyhAt.s 			page 78
+ARM GAS  /tmp/cc1OyXId.s 			page 78
 
 
  3439 00a8 1360     		str	r3, [r2]
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3479 00ec 084B     		ldr	r3, .L195+8
  3480 00ee 0022     		movs	r2, #0
  3481 00f0 1A60     		str	r2, [r3]
-ARM GAS  /tmp/ccMvyhAt.s 			page 79
+ARM GAS  /tmp/cc1OyXId.s 			page 79
 
 
  3482              	.L184:
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3529              		.cfi_offset 14, -4
  3530 0002 8FB0     		sub	sp, sp, #60
  3531              		.cfi_def_cfa_offset 72
-ARM GAS  /tmp/ccMvyhAt.s 			page 80
+ARM GAS  /tmp/cc1OyXId.s 			page 80
 
 
  3532 0004 00AF     		add	r7, sp, #0
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
 1016:assembly_test.c **** 	while (!(cc2400_status() & XOSC16M_STABLE));
  3567              		.loc 1 1016 0
  3568 004c 00BF     		nop
-ARM GAS  /tmp/ccMvyhAt.s 			page 81
+ARM GAS  /tmp/cc1OyXId.s 			page 81
 
 
  3569              	.L198:
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3615 009c FFF7FEFF 		bl	cc2400_strobe
 1025:assembly_test.c **** 
 1026:assembly_test.c **** 			//u32 j = 100; while (--j); //FIXME crude delay
-ARM GAS  /tmp/ccMvyhAt.s 			page 82
+ARM GAS  /tmp/cc1OyXId.s 			page 82
 
 
 1027:assembly_test.c **** 			buf[3 * i] = (f >> 8) & 0xFF;
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3663 010c 3B46     		mov	r3, r7
  3664 010e 1846     		mov	r0, r3
  3665 0110 FFF7FEFF 		bl	enqueue
-ARM GAS  /tmp/ccMvyhAt.s 			page 83
+ARM GAS  /tmp/cc1OyXId.s 			page 83
 
 
 1034:assembly_test.c **** 				i = 0;
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3707 0162 0133     		adds	r3, r3, #1
  3708 0164 FB86     		strh	r3, [r7, #54]	@ movhi
  3709              	.L201:
-ARM GAS  /tmp/ccMvyhAt.s 			page 84
+ARM GAS  /tmp/cc1OyXId.s 			page 84
 
 
 1020:assembly_test.c **** 			cc2400_set(FSDIV, f - 1);
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3758 00cf CC       		.byte	-52
  3759 00d0 73       		.byte	115
  3760 00d1 34       		.byte	52
-ARM GAS  /tmp/ccMvyhAt.s 			page 85
+ARM GAS  /tmp/cc1OyXId.s 			page 85
 
 
  3761 00d2 5E       		.byte	94
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3815              		.thumb_func
  3817              	find_giac:
  3818              	.LFB18:
-ARM GAS  /tmp/ccMvyhAt.s 			page 86
+ARM GAS  /tmp/cc1OyXId.s 			page 86
 
 
 1051:assembly_test.c **** 
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3857              		.loc 1 1066 0
  3858 0034 0023     		movs	r3, #0
  3859 0036 7B64     		str	r3, [r7, #68]
-ARM GAS  /tmp/ccMvyhAt.s 			page 87
+ARM GAS  /tmp/cc1OyXId.s 			page 87
 
 
  3860 0038 7CE0     		b	.L213
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3910 0096 3E3B     		subs	r3, r3, #62
  3911 0098 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  3912 009a 9942     		cmp	r1, r3
-ARM GAS  /tmp/ccMvyhAt.s 			page 88
+ARM GAS  /tmp/cc1OyXId.s 			page 88
 
 
  3913 009c 41D1     		bne	.L215
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  3963 00fe 7B6C     		ldr	r3, [r7, #68]
  3964 0100 0633     		adds	r3, r3, #6
  3965 0102 7A68     		ldr	r2, [r7, #4]
-ARM GAS  /tmp/ccMvyhAt.s 			page 89
+ARM GAS  /tmp/cc1OyXId.s 			page 89
 
 
  3966 0104 1344     		add	r3, r3, r2
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4012 0146 00BF     		.align	2
  4013              	.L220:
  4014 0148 CC000000 		.word	.LC0
-ARM GAS  /tmp/ccMvyhAt.s 			page 90
+ARM GAS  /tmp/cc1OyXId.s 			page 90
 
 
  4015              		.cfi_endproc
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4057              	.L232:
 1093:assembly_test.c **** 		/* wait for DMA transfer */
 1094:assembly_test.c **** 		while ((rx_tc == 0) && (rx_err == 0));
-ARM GAS  /tmp/ccMvyhAt.s 			page 91
+ARM GAS  /tmp/cc1OyXId.s 			page 91
 
 
  4058              		.loc 1 1094 0
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4103 0064 1A4B     		ldr	r3, .L233
  4104 0066 1B68     		ldr	r3, [r3]
  4105 0068 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccMvyhAt.s 			page 92
+ARM GAS  /tmp/cc1OyXId.s 			page 92
 
 
  4106 006a 24D0     		beq	.L228
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4147 00aa 0023     		movs	r3, #0
  4148 00ac BB60     		str	r3, [r7, #8]
  4149 00ae 02E0     		b	.L228
-ARM GAS  /tmp/ccMvyhAt.s 			page 93
+ARM GAS  /tmp/cc1OyXId.s 			page 93
 
 
  4150              	.L231:
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4194              	waitms:
  4195              	.LFB20:
 1128:assembly_test.c **** 
-ARM GAS  /tmp/ccMvyhAt.s 			page 94
+ARM GAS  /tmp/cc1OyXId.s 			page 94
 
 
 1129:assembly_test.c **** /* delay a number of milliseconds while on internal oscillator (4 MHz) */
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
 1137:assembly_test.c **** {
  4244              		.loc 1 1137 0
  4245              		.cfi_startproc
-ARM GAS  /tmp/ccMvyhAt.s 			page 95
+ARM GAS  /tmp/cc1OyXId.s 			page 95
 
 
  4246              		@ args = 0, pretend = 0, frame = 8
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4287 0038 4A4B     		ldr	r3, .L250+4
  4288 003a 0222     		movs	r2, #2
  4289 003c 1A60     		str	r2, [r3]
-ARM GAS  /tmp/ccMvyhAt.s 			page 96
+ARM GAS  /tmp/cc1OyXId.s 			page 96
 
 
 1151:assembly_test.c **** 		waitms(200);
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4329 0084 4FF48072 		mov	r2, #256
  4330 0088 1A60     		str	r2, [r3]
 1164:assembly_test.c **** 	waitms(200);
-ARM GAS  /tmp/ccMvyhAt.s 			page 97
+ARM GAS  /tmp/cc1OyXId.s 			page 97
 
 
  4331              		.loc 1 1164 0
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4372              		.loc 1 1172 0 discriminator 3
  4373 00d0 7B68     		ldr	r3, [r7, #4]
  4374 00d2 0133     		adds	r3, r3, #1
-ARM GAS  /tmp/ccMvyhAt.s 			page 98
+ARM GAS  /tmp/cc1OyXId.s 			page 98
 
 
  4375 00d4 7B60     		str	r3, [r7, #4]
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4410 010a 032B     		cmp	r3, #3
  4411 010c 06D1     		bne	.L246
  4412              		.loc 1 1194 0 is_stmt 0 discriminator 1
-ARM GAS  /tmp/ccMvyhAt.s 			page 99
+ARM GAS  /tmp/cc1OyXId.s 			page 99
 
 
  4413 010e 184B     		ldr	r3, .L250+16
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4460 0158 FFF7FEFF 		bl	specan
  4461              	.L245:
 1202:assembly_test.c **** 		//FIXME do other modes like this
-ARM GAS  /tmp/ccMvyhAt.s 			page 100
+ARM GAS  /tmp/cc1OyXId.s 			page 100
 
 
 1203:assembly_test.c **** 	}
@@ -5961,110 +5961,110 @@ ARM GAS  /tmp/ccMvyhAt.s 			page 1
  4479              		.file 4 "../common/ubertooth.h"
  4480              		.file 5 "../common/lpcusb/target/type.h"
  4481              		.file 6 "../common/lpcusb/target/usbstruct.h"
-ARM GAS  /tmp/ccMvyhAt.s 			page 101
+ARM GAS  /tmp/cc1OyXId.s 			page 101
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 assembly_test.c
-     /tmp/ccMvyhAt.s:19     .data:0000000000000000 $d
-     /tmp/ccMvyhAt.s:22     .data:0000000000000000 iap_entry
+     /tmp/cc1OyXId.s:19     .data:0000000000000000 $d
+     /tmp/cc1OyXId.s:22     .data:0000000000000000 iap_entry
                             *COM*:0000000000000001 clkn_high
                             *COM*:0000000000000032 rxbuf1
                             *COM*:0000000000000032 rxbuf2
-     /tmp/ccMvyhAt.s:31     .data:0000000000000004 active_rxbuf
-     /tmp/ccMvyhAt.s:37     .data:0000000000000008 idle_rxbuf
+     /tmp/cc1OyXId.s:31     .data:0000000000000004 active_rxbuf
+     /tmp/cc1OyXId.s:37     .data:0000000000000008 idle_rxbuf
                             *COM*:0000000000000005 rr
-     /tmp/ccMvyhAt.s:45     .bss:0000000000000000 mode
-     /tmp/ccMvyhAt.s:42     .bss:0000000000000000 $d
-     /tmp/ccMvyhAt.s:51     .bss:0000000000000004 requested_mode
-     /tmp/ccMvyhAt.s:57     .bss:0000000000000008 modulation
-     /tmp/ccMvyhAt.s:64     .data:000000000000000c channel
-     /tmp/ccMvyhAt.s:70     .data:000000000000000e low_freq
-     /tmp/ccMvyhAt.s:76     .data:0000000000000010 high_freq
+     /tmp/cc1OyXId.s:45     .bss:0000000000000000 mode
+     /tmp/cc1OyXId.s:42     .bss:0000000000000000 $d
+     /tmp/cc1OyXId.s:51     .bss:0000000000000004 requested_mode
+     /tmp/cc1OyXId.s:57     .bss:0000000000000008 modulation
+     /tmp/cc1OyXId.s:64     .data:000000000000000c channel
+     /tmp/cc1OyXId.s:70     .data:000000000000000e low_freq
+     /tmp/cc1OyXId.s:76     .data:0000000000000010 high_freq
                             *COM*:0000000000000010 rx_dma_lli1
                             *COM*:0000000000000010 rx_dma_lli2
                             *COM*:0000000000000004 rx_tc
                             *COM*:0000000000000004 rx_err
-     /tmp/ccMvyhAt.s:87     .bss:000000000000000c rx_pkts
-     /tmp/ccMvyhAt.s:92     .bss:0000000000000010 status
+     /tmp/cc1OyXId.s:87     .bss:000000000000000c rx_pkts
+     /tmp/cc1OyXId.s:92     .bss:0000000000000010 status
                             *COM*:0000000000002000 fifo
-     /tmp/ccMvyhAt.s:99     .bss:0000000000000014 head
-     /tmp/ccMvyhAt.s:105    .bss:0000000000000018 tail
-     /tmp/ccMvyhAt.s:108    .text.queue_init:0000000000000000 $t
-     /tmp/ccMvyhAt.s:113    .text.queue_init:0000000000000000 queue_init
-     /tmp/ccMvyhAt.s:145    .text.queue_init:0000000000000018 $d
-     /tmp/ccMvyhAt.s:151    .text.enqueue:0000000000000000 $t
-     /tmp/ccMvyhAt.s:156    .text.enqueue:0000000000000000 enqueue
-     /tmp/ccMvyhAt.s:285    .text.enqueue:00000000000000bc $d
-     /tmp/ccMvyhAt.s:296    .text.dequeue:0000000000000000 $t
-     /tmp/ccMvyhAt.s:301    .text.dequeue:0000000000000000 dequeue
-     /tmp/ccMvyhAt.s:369    .text.dequeue:0000000000000058 $d
-     /tmp/ccMvyhAt.s:377    .rodata:0000000000000000 $d
-     /tmp/ccMvyhAt.s:380    .rodata:0000000000000000 abDescriptors
-     /tmp/ccMvyhAt.s:572    .bss:000000000000001c abVendorReqData
-     /tmp/ccMvyhAt.s:575    .text.usb_bulk_in_handler:0000000000000000 $t
-     /tmp/ccMvyhAt.s:579    .text.usb_bulk_in_handler:0000000000000000 usb_bulk_in_handler
-     /tmp/ccMvyhAt.s:617    .text.usb_bulk_out_handler:0000000000000000 $t
-     /tmp/ccMvyhAt.s:621    .text.usb_bulk_out_handler:0000000000000000 usb_bulk_out_handler
-     /tmp/ccMvyhAt.s:658    .text.usb_vendor_request_handler:0000000000000000 $t
-     /tmp/ccMvyhAt.s:662    .text.usb_vendor_request_handler:0000000000000000 usb_vendor_request_handler
-     /tmp/ccMvyhAt.s:692    .text.usb_vendor_request_handler:0000000000000024 $d
-     /tmp/ccMvyhAt.s:726    .text.usb_vendor_request_handler:00000000000000ac $t
-     /tmp/ccMvyhAt.s:1139   .text.usb_vendor_request_handler:0000000000000334 $d
-     /tmp/ccMvyhAt.s:1149   .text.usb_vendor_request_handler:0000000000000354 $t
-     /tmp/ccMvyhAt.s:1513   .text.usb_vendor_request_handler:0000000000000580 $d
-     /tmp/ccMvyhAt.s:1530   .text.ubertooth_usb_init:0000000000000000 $t
-     /tmp/ccMvyhAt.s:1535   .text.ubertooth_usb_init:0000000000000000 ubertooth_usb_init
-     /tmp/ccMvyhAt.s:1568   .text.ubertooth_usb_init:0000000000000024 $d
-     /tmp/ccMvyhAt.s:1575   .text.clkn_init:0000000000000000 $t
-     /tmp/ccMvyhAt.s:1579   .text.clkn_init:0000000000000000 clkn_init
-     /tmp/ccMvyhAt.s:1632   .text.clkn_init:000000000000003c $d
-     /tmp/ccMvyhAt.s:1643   .text.TIMER0_IRQHandler:0000000000000000 $t
-     /tmp/ccMvyhAt.s:1648   .text.TIMER0_IRQHandler:0000000000000000 TIMER0_IRQHandler
-ARM GAS  /tmp/ccMvyhAt.s 			page 102
+     /tmp/cc1OyXId.s:99     .bss:0000000000000014 head
+     /tmp/cc1OyXId.s:105    .bss:0000000000000018 tail
+     /tmp/cc1OyXId.s:108    .text.queue_init:0000000000000000 $t
+     /tmp/cc1OyXId.s:113    .text.queue_init:0000000000000000 queue_init
+     /tmp/cc1OyXId.s:145    .text.queue_init:0000000000000018 $d
+     /tmp/cc1OyXId.s:151    .text.enqueue:0000000000000000 $t
+     /tmp/cc1OyXId.s:156    .text.enqueue:0000000000000000 enqueue
+     /tmp/cc1OyXId.s:285    .text.enqueue:00000000000000bc $d
+     /tmp/cc1OyXId.s:296    .text.dequeue:0000000000000000 $t
+     /tmp/cc1OyXId.s:301    .text.dequeue:0000000000000000 dequeue
+     /tmp/cc1OyXId.s:369    .text.dequeue:0000000000000058 $d
+     /tmp/cc1OyXId.s:377    .rodata:0000000000000000 $d
+     /tmp/cc1OyXId.s:380    .rodata:0000000000000000 abDescriptors
+     /tmp/cc1OyXId.s:572    .bss:000000000000001c abVendorReqData
+     /tmp/cc1OyXId.s:575    .text.usb_bulk_in_handler:0000000000000000 $t
+     /tmp/cc1OyXId.s:579    .text.usb_bulk_in_handler:0000000000000000 usb_bulk_in_handler
+     /tmp/cc1OyXId.s:617    .text.usb_bulk_out_handler:0000000000000000 $t
+     /tmp/cc1OyXId.s:621    .text.usb_bulk_out_handler:0000000000000000 usb_bulk_out_handler
+     /tmp/cc1OyXId.s:658    .text.usb_vendor_request_handler:0000000000000000 $t
+     /tmp/cc1OyXId.s:662    .text.usb_vendor_request_handler:0000000000000000 usb_vendor_request_handler
+     /tmp/cc1OyXId.s:692    .text.usb_vendor_request_handler:0000000000000024 $d
+     /tmp/cc1OyXId.s:726    .text.usb_vendor_request_handler:00000000000000ac $t
+     /tmp/cc1OyXId.s:1139   .text.usb_vendor_request_handler:0000000000000334 $d
+     /tmp/cc1OyXId.s:1149   .text.usb_vendor_request_handler:0000000000000354 $t
+     /tmp/cc1OyXId.s:1513   .text.usb_vendor_request_handler:0000000000000580 $d
+     /tmp/cc1OyXId.s:1530   .text.ubertooth_usb_init:0000000000000000 $t
+     /tmp/cc1OyXId.s:1535   .text.ubertooth_usb_init:0000000000000000 ubertooth_usb_init
+     /tmp/cc1OyXId.s:1568   .text.ubertooth_usb_init:0000000000000024 $d
+     /tmp/cc1OyXId.s:1575   .text.clkn_init:0000000000000000 $t
+     /tmp/cc1OyXId.s:1579   .text.clkn_init:0000000000000000 clkn_init
+     /tmp/cc1OyXId.s:1632   .text.clkn_init:000000000000003c $d
+     /tmp/cc1OyXId.s:1643   .text.TIMER0_IRQHandler:0000000000000000 $t
+     /tmp/cc1OyXId.s:1648   .text.TIMER0_IRQHandler:0000000000000000 TIMER0_IRQHandler
+ARM GAS  /tmp/cc1OyXId.s 			page 102
 
 
-     /tmp/ccMvyhAt.s:1692   .text.TIMER0_IRQHandler:0000000000000038 $d
-     /tmp/ccMvyhAt.s:1697   .text.dma_init:0000000000000000 $t
-     /tmp/ccMvyhAt.s:1701   .text.dma_init:0000000000000000 dma_init
-     /tmp/ccMvyhAt.s:1853   .text.dma_init:00000000000000d8 $d
-     /tmp/ccMvyhAt.s:1882   .text.DMA_IRQHandler:0000000000000000 $t
-     /tmp/ccMvyhAt.s:1887   .text.DMA_IRQHandler:0000000000000000 DMA_IRQHandler
-     /tmp/ccMvyhAt.s:1954   .text.DMA_IRQHandler:000000000000005c $d
-     /tmp/ccMvyhAt.s:1965   .text.dio_ssp_start:0000000000000000 $t
-     /tmp/ccMvyhAt.s:1969   .text.dio_ssp_start:0000000000000000 dio_ssp_start
-     /tmp/ccMvyhAt.s:2024   .text.dio_ssp_start:000000000000004c $d
-     /tmp/ccMvyhAt.s:2034   .text.cc2400_rx:0000000000000000 $t
-     /tmp/ccMvyhAt.s:2039   .text.cc2400_rx:0000000000000000 cc2400_rx
-     /tmp/ccMvyhAt.s:2164   .text.cc2400_rx:00000000000000dc $d
-     /tmp/ccMvyhAt.s:2171   .text.cc2400_txtest:0000000000000000 $t
-     /tmp/ccMvyhAt.s:2176   .text.cc2400_txtest:0000000000000000 cc2400_txtest
-     /tmp/ccMvyhAt.s:2293   .text.cc2400_txtest:00000000000000c4 $d
-     /tmp/ccMvyhAt.s:2302   .text.cc2400_rangetest:0000000000000000 $t
-     /tmp/ccMvyhAt.s:2307   .text.cc2400_rangetest:0000000000000000 cc2400_rangetest
-     /tmp/ccMvyhAt.s:2805   .text.cc2400_rangetest:0000000000000384 $d
-     /tmp/ccMvyhAt.s:2813   .text.cc2400_rangetest:000000000000039c $t
-     /tmp/ccMvyhAt.s:2929   .text.cc2400_rangetest:0000000000000450 $d
-     /tmp/ccMvyhAt.s:2938   .text.cc2400_repeater:0000000000000000 $t
-     /tmp/ccMvyhAt.s:2943   .text.cc2400_repeater:0000000000000000 cc2400_repeater
-     /tmp/ccMvyhAt.s:3310   .text.cc2400_repeater:000000000000026c $d
-     /tmp/ccMvyhAt.s:3320   .text.bt_stream_rx:0000000000000000 $t
-     /tmp/ccMvyhAt.s:3325   .text.bt_stream_rx:0000000000000000 bt_stream_rx
-     /tmp/ccMvyhAt.s:3502   .text.bt_stream_rx:0000000000000108 $d
-     /tmp/ccMvyhAt.s:3514   .text.specan:0000000000000000 $t
-     /tmp/ccMvyhAt.s:3519   .text.specan:0000000000000000 specan
-     /tmp/ccMvyhAt.s:3742   .text.specan:0000000000000190 $d
-     /tmp/ccMvyhAt.s:3812   .text.find_giac:0000000000000000 $t
-     /tmp/ccMvyhAt.s:3817   .text.find_giac:0000000000000000 find_giac
-     /tmp/ccMvyhAt.s:4014   .text.find_giac:0000000000000148 $d
-     /tmp/ccMvyhAt.s:4019   .text.bt_test_rx:0000000000000000 $t
-     /tmp/ccMvyhAt.s:4024   .text.bt_test_rx:0000000000000000 bt_test_rx
-     /tmp/ccMvyhAt.s:4179   .text.bt_test_rx:00000000000000d0 $d
-     /tmp/ccMvyhAt.s:4189   .text.waitms:0000000000000000 $t
-     /tmp/ccMvyhAt.s:4194   .text.waitms:0000000000000000 waitms
-     /tmp/ccMvyhAt.s:4237   .text.main:0000000000000000 $t
-     /tmp/ccMvyhAt.s:4242   .text.main:0000000000000000 main
-     /tmp/ccMvyhAt.s:4467   .text.main:0000000000000160 $d
+     /tmp/cc1OyXId.s:1692   .text.TIMER0_IRQHandler:0000000000000038 $d
+     /tmp/cc1OyXId.s:1697   .text.dma_init:0000000000000000 $t
+     /tmp/cc1OyXId.s:1701   .text.dma_init:0000000000000000 dma_init
+     /tmp/cc1OyXId.s:1853   .text.dma_init:00000000000000d8 $d
+     /tmp/cc1OyXId.s:1882   .text.DMA_IRQHandler:0000000000000000 $t
+     /tmp/cc1OyXId.s:1887   .text.DMA_IRQHandler:0000000000000000 DMA_IRQHandler
+     /tmp/cc1OyXId.s:1954   .text.DMA_IRQHandler:000000000000005c $d
+     /tmp/cc1OyXId.s:1965   .text.dio_ssp_start:0000000000000000 $t
+     /tmp/cc1OyXId.s:1969   .text.dio_ssp_start:0000000000000000 dio_ssp_start
+     /tmp/cc1OyXId.s:2024   .text.dio_ssp_start:000000000000004c $d
+     /tmp/cc1OyXId.s:2034   .text.cc2400_rx:0000000000000000 $t
+     /tmp/cc1OyXId.s:2039   .text.cc2400_rx:0000000000000000 cc2400_rx
+     /tmp/cc1OyXId.s:2164   .text.cc2400_rx:00000000000000dc $d
+     /tmp/cc1OyXId.s:2171   .text.cc2400_txtest:0000000000000000 $t
+     /tmp/cc1OyXId.s:2176   .text.cc2400_txtest:0000000000000000 cc2400_txtest
+     /tmp/cc1OyXId.s:2293   .text.cc2400_txtest:00000000000000c4 $d
+     /tmp/cc1OyXId.s:2302   .text.cc2400_rangetest:0000000000000000 $t
+     /tmp/cc1OyXId.s:2307   .text.cc2400_rangetest:0000000000000000 cc2400_rangetest
+     /tmp/cc1OyXId.s:2805   .text.cc2400_rangetest:0000000000000384 $d
+     /tmp/cc1OyXId.s:2813   .text.cc2400_rangetest:000000000000039c $t
+     /tmp/cc1OyXId.s:2929   .text.cc2400_rangetest:0000000000000450 $d
+     /tmp/cc1OyXId.s:2938   .text.cc2400_repeater:0000000000000000 $t
+     /tmp/cc1OyXId.s:2943   .text.cc2400_repeater:0000000000000000 cc2400_repeater
+     /tmp/cc1OyXId.s:3310   .text.cc2400_repeater:000000000000026c $d
+     /tmp/cc1OyXId.s:3320   .text.bt_stream_rx:0000000000000000 $t
+     /tmp/cc1OyXId.s:3325   .text.bt_stream_rx:0000000000000000 bt_stream_rx
+     /tmp/cc1OyXId.s:3502   .text.bt_stream_rx:0000000000000108 $d
+     /tmp/cc1OyXId.s:3514   .text.specan:0000000000000000 $t
+     /tmp/cc1OyXId.s:3519   .text.specan:0000000000000000 specan
+     /tmp/cc1OyXId.s:3742   .text.specan:0000000000000190 $d
+     /tmp/cc1OyXId.s:3812   .text.find_giac:0000000000000000 $t
+     /tmp/cc1OyXId.s:3817   .text.find_giac:0000000000000000 find_giac
+     /tmp/cc1OyXId.s:4014   .text.find_giac:0000000000000148 $d
+     /tmp/cc1OyXId.s:4019   .text.bt_test_rx:0000000000000000 $t
+     /tmp/cc1OyXId.s:4024   .text.bt_test_rx:0000000000000000 bt_test_rx
+     /tmp/cc1OyXId.s:4179   .text.bt_test_rx:00000000000000d0 $d
+     /tmp/cc1OyXId.s:4189   .text.waitms:0000000000000000 $t
+     /tmp/cc1OyXId.s:4194   .text.waitms:0000000000000000 waitms
+     /tmp/cc1OyXId.s:4237   .text.main:0000000000000000 $t
+     /tmp/cc1OyXId.s:4242   .text.main:0000000000000000 main
+     /tmp/cc1OyXId.s:4467   .text.main:0000000000000160 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
@@ -6081,7 +6081,7 @@ USBRegisterRequestHandler
 USBHwConnect
 cc2400_status
 cc2400_strobe
-ARM GAS  /tmp/ccMvyhAt.s 			page 103
+ARM GAS  /tmp/cc1OyXId.s 			page 103
 
 
 cc2400_set8
