@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c
 bluetooth/bluetooth.h
 -
 bluetooth/hci.h
@@ -22,7 +22,7 @@ stdlib.h
 err.h
 -
 ubertooth.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth.h
 btbb.h
 -
 getopt.h

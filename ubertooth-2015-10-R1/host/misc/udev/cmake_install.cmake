@@ -1,4 +1,4 @@
-# Install script for directory: //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/misc/udev
+# Install script for directory: /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/misc/udev
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,6 +41,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "udev_ru
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/etc/udev/rules.d" TYPE FILE FILES "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/misc/udev/40-ubertooth.rules")
+file(INSTALL DESTINATION "/etc/udev/rules.d" TYPE FILE FILES "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/misc/udev/40-ubertooth.rules")
 endif()
 

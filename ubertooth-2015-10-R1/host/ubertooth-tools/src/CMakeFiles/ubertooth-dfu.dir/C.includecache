@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/dfu.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/dfu.h
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-dfu.c
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-dfu.c
 getopt.h
 -
 stdio.h
@@ -20,9 +20,9 @@ stdlib.h
 unistd.h
 -
 ubertooth.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth.h
 dfu.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/dfu.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/dfu.h
 
 /usr/include/libusb-1.0/libusb.h
 stdint.h

@@ -1,4 +1,4 @@
-# Install script for directory: //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src
+# Install script for directory: /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -46,9 +46,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "sharedl
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/libubertooth.so.0.2"
-    "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/libubertooth.so.0"
-    "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/libubertooth.so"
+    "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/libubertooth.so.0.2"
+    "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/libubertooth.so.0"
+    "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/libubertooth.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libubertooth.so.0.2"
@@ -70,9 +70,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "headers")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.h"
-    "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h"
-    "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_interface.h"
+    "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.h"
+    "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h"
+    "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_interface.h"
     )
 endif()
 

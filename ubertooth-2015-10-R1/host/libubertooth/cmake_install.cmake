@@ -1,4 +1,4 @@
-# Install script for directory: //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth
+# Install script for directory: /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/cmake_install.cmake")
+  include("/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/cmake_install.cmake")
 
 endif()
 

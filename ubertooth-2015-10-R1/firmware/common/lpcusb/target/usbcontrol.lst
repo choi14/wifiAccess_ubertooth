@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDpifkr.s 			page 1
+ARM GAS  /tmp/ccjr3Hqm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
    5:../common/lpcusb/target/usbcontrol.c **** 	Redistribution and use in source and binary forms, with or without
    6:../common/lpcusb/target/usbcontrol.c **** 	modification, are permitted provided that the following conditions are met:
    7:../common/lpcusb/target/usbcontrol.c **** 
-ARM GAS  /tmp/ccDpifkr.s 			page 2
+ARM GAS  /tmp/ccjr3Hqm.s 			page 2
 
 
    8:../common/lpcusb/target/usbcontrol.c **** 	1. Redistributions of source code must retain the above copyright
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
   62:../common/lpcusb/target/usbcontrol.c **** static TSetupPacket		Setup;	/**< setup packet */
   63:../common/lpcusb/target/usbcontrol.c **** 
   64:../common/lpcusb/target/usbcontrol.c **** static U8				*pbData;	/**< pointer to data buffer */
-ARM GAS  /tmp/ccDpifkr.s 			page 3
+ARM GAS  /tmp/ccjr3Hqm.s 			page 3
 
 
   65:../common/lpcusb/target/usbcontrol.c **** static int				iResidue;	/**< remaining bytes in buffer */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
   65 0014 03F00303 		and	r3, r3, #3
   66 0018 FB61     		str	r3, [r7, #28]
   99:../common/lpcusb/target/usbcontrol.c **** 	
-ARM GAS  /tmp/ccDpifkr.s 			page 4
+ARM GAS  /tmp/ccjr3Hqm.s 			page 4
 
 
  100:../common/lpcusb/target/usbcontrol.c **** 	if(iType == REQTYPE_TYPE_VENDOR) {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  107 0058 7A68     		ldr	r2, [r7, #4]
  108 005a 9847     		blx	r3
  109 005c 0346     		mov	r3, r0
-ARM GAS  /tmp/ccDpifkr.s 			page 5
+ARM GAS  /tmp/ccjr3Hqm.s 			page 5
 
 
  110              	.L4:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  129:../common/lpcusb/target/usbcontrol.c **** // dump setup packet
  130:../common/lpcusb/target/usbcontrol.c **** 	DBG("STALL on [");
  131:../common/lpcusb/target/usbcontrol.c **** 	pb = (U8 *)&Setup;
-ARM GAS  /tmp/ccDpifkr.s 			page 6
+ARM GAS  /tmp/ccjr3Hqm.s 			page 6
 
 
  151              		.loc 1 131 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  195              		.cfi_offset 7, -8
  196              		.cfi_offset 14, -4
  197 0002 82B0     		sub	sp, sp, #8
-ARM GAS  /tmp/ccDpifkr.s 			page 7
+ARM GAS  /tmp/ccjr3Hqm.s 			page 7
 
 
  198              		.cfi_def_cfa_offset 16
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  246              		.align	2
  247              		.global	USBHandleControlTransfer
  248              		.thumb
-ARM GAS  /tmp/ccDpifkr.s 			page 8
+ARM GAS  /tmp/ccjr3Hqm.s 			page 8
 
 
  249              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  171:../common/lpcusb/target/usbcontrol.c **** 			iType = REQTYPE_GET_TYPE(Setup.bmRequestType);
  284              		.loc 1 171 0
  285 002c 474B     		ldr	r3, .L28
-ARM GAS  /tmp/ccDpifkr.s 			page 9
+ARM GAS  /tmp/ccjr3Hqm.s 			page 9
 
 
  286 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  331 0080 04D1     		bne	.L21
  180:../common/lpcusb/target/usbcontrol.c **** 					DBG("_HandleRequest1 failed\n");
  181:../common/lpcusb/target/usbcontrol.c **** 					StallControlPipe(bEPStat);
-ARM GAS  /tmp/ccDpifkr.s 			page 10
+ARM GAS  /tmp/ccjr3Hqm.s 			page 10
 
 
  332              		.loc 1 181 0
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  195:../common/lpcusb/target/usbcontrol.c **** 					StallControlPipe(bEPStat);
  373              		.loc 1 195 0
  374 00c8 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
-ARM GAS  /tmp/ccDpifkr.s 			page 11
+ARM GAS  /tmp/ccjr3Hqm.s 			page 11
 
 
  375 00ca 1846     		mov	r0, r3
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  205:../common/lpcusb/target/usbcontrol.c **** 						DBG("_HandleRequest2 failed\n");
  206:../common/lpcusb/target/usbcontrol.c **** 						StallControlPipe(bEPStat);
  420              		.loc 1 206 0
-ARM GAS  /tmp/ccDpifkr.s 			page 12
+ARM GAS  /tmp/ccjr3Hqm.s 			page 12
 
 
  421 011c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  453              	.L29:
  454 014a 00BF     		.align	2
  455              	.L28:
-ARM GAS  /tmp/ccDpifkr.s 			page 13
+ARM GAS  /tmp/ccjr3Hqm.s 			page 13
 
 
  456 014c 00000000 		.word	Setup
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  244:../common/lpcusb/target/usbcontrol.c **** }
  497              		.loc 1 244 0
  498 0020 1437     		adds	r7, r7, #20
-ARM GAS  /tmp/ccDpifkr.s 			page 14
+ARM GAS  /tmp/ccjr3Hqm.s 			page 14
 
 
  499              		.cfi_def_cfa_offset 4
@@ -801,33 +801,33 @@ ARM GAS  /tmp/ccDpifkr.s 			page 1
  517              		.file 2 "../common/lpcusb/target/type.h"
  518              		.file 3 "../common/lpcusb/target/usbstruct.h"
  519              		.file 4 "../common/lpcusb/target/usbapi.h"
-ARM GAS  /tmp/ccDpifkr.s 			page 15
+ARM GAS  /tmp/ccjr3Hqm.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbcontrol.c
-     /tmp/ccDpifkr.s:19     .bss:0000000000000000 $d
-     /tmp/ccDpifkr.s:20     .bss:0000000000000000 Setup
-     /tmp/ccDpifkr.s:23     .bss:0000000000000008 pbData
-     /tmp/ccDpifkr.s:26     .bss:000000000000000c iResidue
-     /tmp/ccDpifkr.s:29     .bss:0000000000000010 iLen
-     /tmp/ccDpifkr.s:32     .bss:0000000000000014 apfnReqHandlers
-     /tmp/ccDpifkr.s:35     .bss:0000000000000024 apbDataStore
-     /tmp/ccDpifkr.s:38     .text._HandleRequest:0000000000000000 $t
-     /tmp/ccDpifkr.s:42     .text._HandleRequest:0000000000000000 _HandleRequest
-     /tmp/ccDpifkr.s:122    .text._HandleRequest:0000000000000068 $d
-     /tmp/ccDpifkr.s:127    .text.StallControlPipe:0000000000000000 $t
-     /tmp/ccDpifkr.s:131    .text.StallControlPipe:0000000000000000 StallControlPipe
-     /tmp/ccDpifkr.s:178    .text.StallControlPipe:0000000000000030 $d
-     /tmp/ccDpifkr.s:183    .text.DataIn:0000000000000000 $t
-     /tmp/ccDpifkr.s:187    .text.DataIn:0000000000000000 DataIn
-     /tmp/ccDpifkr.s:240    .text.DataIn:0000000000000040 $d
-     /tmp/ccDpifkr.s:246    .text.USBHandleControlTransfer:0000000000000000 $t
-     /tmp/ccDpifkr.s:251    .text.USBHandleControlTransfer:0000000000000000 USBHandleControlTransfer
-     /tmp/ccDpifkr.s:456    .text.USBHandleControlTransfer:000000000000014c $d
-     /tmp/ccDpifkr.s:465    .text.USBRegisterRequestHandler:0000000000000000 $t
-     /tmp/ccDpifkr.s:470    .text.USBRegisterRequestHandler:0000000000000000 USBRegisterRequestHandler
-     /tmp/ccDpifkr.s:510    .text.USBRegisterRequestHandler:000000000000002c $d
+     /tmp/ccjr3Hqm.s:19     .bss:0000000000000000 $d
+     /tmp/ccjr3Hqm.s:20     .bss:0000000000000000 Setup
+     /tmp/ccjr3Hqm.s:23     .bss:0000000000000008 pbData
+     /tmp/ccjr3Hqm.s:26     .bss:000000000000000c iResidue
+     /tmp/ccjr3Hqm.s:29     .bss:0000000000000010 iLen
+     /tmp/ccjr3Hqm.s:32     .bss:0000000000000014 apfnReqHandlers
+     /tmp/ccjr3Hqm.s:35     .bss:0000000000000024 apbDataStore
+     /tmp/ccjr3Hqm.s:38     .text._HandleRequest:0000000000000000 $t
+     /tmp/ccjr3Hqm.s:42     .text._HandleRequest:0000000000000000 _HandleRequest
+     /tmp/ccjr3Hqm.s:122    .text._HandleRequest:0000000000000068 $d
+     /tmp/ccjr3Hqm.s:127    .text.StallControlPipe:0000000000000000 $t
+     /tmp/ccjr3Hqm.s:131    .text.StallControlPipe:0000000000000000 StallControlPipe
+     /tmp/ccjr3Hqm.s:178    .text.StallControlPipe:0000000000000030 $d
+     /tmp/ccjr3Hqm.s:183    .text.DataIn:0000000000000000 $t
+     /tmp/ccjr3Hqm.s:187    .text.DataIn:0000000000000000 DataIn
+     /tmp/ccjr3Hqm.s:240    .text.DataIn:0000000000000040 $d
+     /tmp/ccjr3Hqm.s:246    .text.USBHandleControlTransfer:0000000000000000 $t
+     /tmp/ccjr3Hqm.s:251    .text.USBHandleControlTransfer:0000000000000000 USBHandleControlTransfer
+     /tmp/ccjr3Hqm.s:456    .text.USBHandleControlTransfer:000000000000014c $d
+     /tmp/ccjr3Hqm.s:465    .text.USBRegisterRequestHandler:0000000000000000 $t
+     /tmp/ccjr3Hqm.s:470    .text.USBRegisterRequestHandler:0000000000000000 USBRegisterRequestHandler
+     /tmp/ccjr3Hqm.s:510    .text.USBRegisterRequestHandler:000000000000002c $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

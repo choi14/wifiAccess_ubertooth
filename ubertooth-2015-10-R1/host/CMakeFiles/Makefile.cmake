@@ -7,6 +7,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/jychoi/wifiAccess/ubertooth/.git/HEAD"
+  "/home/jychoi/wifiAccess/ubertooth/.git/refs/heads/master"
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeSystem.cmake"
@@ -18,7 +20,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "cmake/modules/FindPythonInterp.cmake"
   "cmake/modules/FindUSB1.cmake"
   "cmake/modules/GetGitRevisionDescription.cmake"
+  "cmake/modules/GetGitRevisionDescription.cmake.in"
   "libubertooth/CMakeLists.txt"
+  "libubertooth/src/CMakeFiles/git-data/grabRef.cmake"
   "libubertooth/src/CMakeLists.txt"
   "misc/CMakeLists.txt"
   "misc/udev/40-ubertooth.rules.in"

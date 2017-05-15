@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_SOURCE_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_BINARY_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # Utility rule file for specan.
 
@@ -58,9 +58,9 @@ python/specan_ui/CMakeFiles/specan: python/specan_ui/build/timestamp
 
 python/specan_ui/build/timestamp: python/specan_ui/specan/__init__.py
 python/specan_ui/build/timestamp: python/specan_ui/specan/Ubertooth.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating build/timestamp"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && /usr/bin/python setup.py build
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && /usr/bin/cmake -E touch //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/build/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating build/timestamp"
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && /usr/bin/python setup.py build
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && /usr/bin/cmake -E touch /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/build/timestamp
 
 specan: python/specan_ui/CMakeFiles/specan
 specan: python/specan_ui/build/timestamp
@@ -74,10 +74,10 @@ python/specan_ui/CMakeFiles/specan.dir/build: specan
 .PHONY : python/specan_ui/CMakeFiles/specan.dir/build
 
 python/specan_ui/CMakeFiles/specan.dir/clean:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && $(CMAKE_COMMAND) -P CMakeFiles/specan.dir/cmake_clean.cmake
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && $(CMAKE_COMMAND) -P CMakeFiles/specan.dir/cmake_clean.cmake
 .PHONY : python/specan_ui/CMakeFiles/specan.dir/clean
 
 python/specan_ui/CMakeFiles/specan.dir/depend:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/CMakeFiles/specan.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/CMakeFiles/specan.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : python/specan_ui/CMakeFiles/specan.dir/depend
 

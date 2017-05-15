@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_SOURCE_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_BINARY_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_progress_start //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/CMakeFiles/progress.marks
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/all
-	$(CMAKE_COMMAND) -E cmake_progress_start //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles 0
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_progress_start /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/CMakeFiles/progress.marks
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/clean
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/preinstall
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/preinstall
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 python/specan_ui/CMakeFiles/specan.dir/rule:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/CMakeFiles/specan.dir/rule
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/CMakeFiles/specan.dir/rule
 .PHONY : python/specan_ui/CMakeFiles/specan.dir/rule
 
 # Convenience name for target.
@@ -166,12 +166,12 @@ specan: python/specan_ui/CMakeFiles/specan.dir/rule
 
 # fast build rule for target.
 specan/fast:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f python/specan_ui/CMakeFiles/specan.dir/build.make python/specan_ui/CMakeFiles/specan.dir/build
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f python/specan_ui/CMakeFiles/specan.dir/build.make python/specan_ui/CMakeFiles/specan.dir/build
 .PHONY : specan/fast
 
 # Convenience name for target.
 python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/rule:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/rule
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f CMakeFiles/Makefile2 python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/rule
 .PHONY : python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/rule
 
 # Convenience name for target.
@@ -181,7 +181,7 @@ ubertooth-specan-ui: python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/rule
 
 # fast build rule for target.
 ubertooth-specan-ui/fast:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/build.make python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/build
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(MAKE) -f python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/build.make python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/build
 .PHONY : ubertooth-specan-ui/fast
 
 # Help Target
@@ -209,6 +209,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

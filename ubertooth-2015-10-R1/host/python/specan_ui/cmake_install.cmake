@@ -1,4 +1,4 @@
-# Install script for directory: //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui
+# Install script for directory: /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,10 +33,10 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND /usr/bin/python //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/setup.py build -b //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/build install)
+  execute_process(COMMAND /usr/bin/python /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/setup.py build -b /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/build install)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/ubertooth-specan-ui")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/ubertooth-specan-ui")
 endif()
 

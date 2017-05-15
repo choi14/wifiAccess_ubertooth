@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS = -fPIC  
 
-C_DEFINES = -DENABLE_PCAP -DRELEASE=\"GITDIR-NOTFOUND\" -DVERSION=\"0.2\" -Dubertooth_EXPORTS
+C_DEFINES = -DENABLE_PCAP -DRELEASE="\"45e057d*\"" -DVERSION=\"0.2\" -Dubertooth_EXPORTS
 
 C_INCLUDES = -I/usr/include/libusb-1.0 -I/usr/local/include 
 

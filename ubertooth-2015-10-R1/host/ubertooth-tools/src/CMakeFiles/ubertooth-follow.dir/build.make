@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_SOURCE_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_BINARY_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # Include any dependencies generated for this target.
 include ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/depend.make
@@ -59,16 +59,16 @@ include ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/flags.make
 
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.o: ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/flags.make
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.o: ubertooth-tools/src/ubertooth-follow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.o"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.o   -c //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.o"
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.o   -c /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c
 
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.i"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c > CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.i
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c > CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.i
 
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.s"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c -o CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.s
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-follow.c -o CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.s
 
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/ubertooth-follow.c.o.requires:
 
@@ -95,8 +95,8 @@ ubertooth-tools/src/ubertooth-follow: /usr/lib/x86_64-linux-gnu/libusb-1.0.so
 ubertooth-tools/src/ubertooth-follow: /usr/local/lib/libbtbb.so
 ubertooth-tools/src/ubertooth-follow: /usr/lib/x86_64-linux-gnu/libbluetooth.so
 ubertooth-tools/src/ubertooth-follow: ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ubertooth-follow"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ubertooth-follow.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ubertooth-follow"
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ubertooth-follow.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/build: ubertooth-tools/src/ubertooth-follow
@@ -108,10 +108,10 @@ ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/requires: ubertooth-tools/sr
 .PHONY : ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/requires
 
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/clean:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && $(CMAKE_COMMAND) -P CMakeFiles/ubertooth-follow.dir/cmake_clean.cmake
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src && $(CMAKE_COMMAND) -P CMakeFiles/ubertooth-follow.dir/cmake_clean.cmake
 .PHONY : ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/clean
 
 ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/depend:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ubertooth-tools/src/CMakeFiles/ubertooth-follow.dir/depend
 

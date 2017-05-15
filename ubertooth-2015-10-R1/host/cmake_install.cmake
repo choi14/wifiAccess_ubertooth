@@ -1,4 +1,4 @@
-# Install script for directory: //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+# Install script for directory: /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/cmake_install.cmake")
-  include("//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/cmake_install.cmake")
-  include("//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/misc/cmake_install.cmake")
-  include("//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/cmake_install.cmake")
+  include("/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/cmake_install.cmake")
+  include("/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/cmake_install.cmake")
+  include("/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/misc/cmake_install.cmake")
+  include("/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/cmake_install.cmake")
 
 endif()
 
@@ -49,5 +49,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

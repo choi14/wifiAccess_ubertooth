@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_SOURCE_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_BINARY_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # Include any dependencies generated for this target.
 include libubertooth/src/CMakeFiles/ubertooth.dir/depend.make
@@ -59,16 +59,16 @@ include libubertooth/src/CMakeFiles/ubertooth.dir/flags.make
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.o: libubertooth/src/CMakeFiles/ubertooth.dir/flags.make
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.o: libubertooth/src/ubertooth.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.o"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ubertooth.dir/ubertooth.c.o   -c //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.o"
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ubertooth.dir/ubertooth.c.o   -c /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ubertooth.dir/ubertooth.c.i"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c > CMakeFiles/ubertooth.dir/ubertooth.c.i
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c > CMakeFiles/ubertooth.dir/ubertooth.c.i
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ubertooth.dir/ubertooth.c.s"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c -o CMakeFiles/ubertooth.dir/ubertooth.c.s
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c -o CMakeFiles/ubertooth.dir/ubertooth.c.s
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.o.requires:
 
@@ -83,16 +83,16 @@ libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth.c.o.provides.build: libubert
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth_control.c.o: libubertooth/src/CMakeFiles/ubertooth.dir/flags.make
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth_control.c.o: libubertooth/src/ubertooth_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth_control.c.o"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ubertooth.dir/ubertooth_control.c.o   -c //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth_control.c.o"
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ubertooth.dir/ubertooth_control.c.o   -c /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth_control.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ubertooth.dir/ubertooth_control.c.i"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c > CMakeFiles/ubertooth.dir/ubertooth_control.c.i
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c > CMakeFiles/ubertooth.dir/ubertooth_control.c.i
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth_control.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ubertooth.dir/ubertooth_control.c.s"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c -o CMakeFiles/ubertooth.dir/ubertooth_control.c.s
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c -o CMakeFiles/ubertooth.dir/ubertooth_control.c.s
 
 libubertooth/src/CMakeFiles/ubertooth.dir/ubertooth_control.c.o.requires:
 
@@ -119,9 +119,9 @@ libubertooth/src/libubertooth.so.0.2: libubertooth/src/CMakeFiles/ubertooth.dir/
 libubertooth/src/libubertooth.so.0.2: /usr/lib/x86_64-linux-gnu/libusb-1.0.so
 libubertooth/src/libubertooth.so.0.2: /usr/local/lib/libbtbb.so
 libubertooth/src/libubertooth.so.0.2: libubertooth/src/CMakeFiles/ubertooth.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libubertooth.so"
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ubertooth.dir/link.txt --verbose=$(VERBOSE)
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && $(CMAKE_COMMAND) -E cmake_symlink_library libubertooth.so.0.2 libubertooth.so.0 libubertooth.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libubertooth.so"
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ubertooth.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && $(CMAKE_COMMAND) -E cmake_symlink_library libubertooth.so.0.2 libubertooth.so.0 libubertooth.so
 
 libubertooth/src/libubertooth.so.0: libubertooth/src/libubertooth.so.0.2
 	@$(CMAKE_COMMAND) -E touch_nocreate libubertooth/src/libubertooth.so.0
@@ -140,10 +140,10 @@ libubertooth/src/CMakeFiles/ubertooth.dir/requires: libubertooth/src/CMakeFiles/
 .PHONY : libubertooth/src/CMakeFiles/ubertooth.dir/requires
 
 libubertooth/src/CMakeFiles/ubertooth.dir/clean:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && $(CMAKE_COMMAND) -P CMakeFiles/ubertooth.dir/cmake_clean.cmake
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src && $(CMAKE_COMMAND) -P CMakeFiles/ubertooth.dir/cmake_clean.cmake
 .PHONY : libubertooth/src/CMakeFiles/ubertooth.dir/clean
 
 libubertooth/src/CMakeFiles/ubertooth.dir/depend:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/CMakeFiles/ubertooth.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/CMakeFiles/ubertooth.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libubertooth/src/CMakeFiles/ubertooth.dir/depend
 

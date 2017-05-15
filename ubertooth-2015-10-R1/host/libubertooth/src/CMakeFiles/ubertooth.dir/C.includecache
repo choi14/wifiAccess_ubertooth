@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.c
 stdio.h
 -
 stdlib.h
@@ -20,25 +20,25 @@ unistd.h
 signal.h
 -
 ubertooth.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.h
 ubertooth_control.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth.h
 ubertooth_control.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
 btbb.h
 -
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.c
 string.h
 -
 btbb.h
 -
 ubertooth_control.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_control.h
 libusb.h
 -
 CoreServices/CoreServices.h
@@ -52,9 +52,9 @@ endian.h
 stdio.h
 -
 ubertooth_interface.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_interface.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_interface.h
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_interface.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src/ubertooth_interface.h
 
 /usr/include/libusb-1.0/libusb.h
 stdint.h

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-scan.c
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth-scan.c
 stdlib.h
 -
 unistd.h
@@ -24,7 +24,7 @@ sys/socket.h
 sys/ioctl.h
 -
 ubertooth.h
-//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth.h
+/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/ubertooth-tools/src/ubertooth.h
 btbb.h
 -
 getopt.h

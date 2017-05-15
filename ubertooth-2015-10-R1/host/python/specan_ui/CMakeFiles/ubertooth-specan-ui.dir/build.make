@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_SOURCE_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
+CMAKE_BINARY_DIR = /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host
 
 # Utility rule file for ubertooth-specan-ui.
 
@@ -67,10 +67,10 @@ python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/build: ubertooth-specan-ui
 .PHONY : python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/build
 
 python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/clean:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && $(CMAKE_COMMAND) -P CMakeFiles/ubertooth-specan-ui.dir/cmake_clean.cmake
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui && $(CMAKE_COMMAND) -P CMakeFiles/ubertooth-specan-ui.dir/cmake_clean.cmake
 .PHONY : python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/clean
 
 python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/depend:
-	cd //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui //home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui /home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : python/specan_ui/CMakeFiles/ubertooth-specan-ui.dir/depend
 

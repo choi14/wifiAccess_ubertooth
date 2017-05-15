@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = -DENABLE_PCAP -DVERSION=\"0.2\"
 
-C_INCLUDES = -I//home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src -I/usr/include/libusb-1.0 -I/usr/local/include -I/usr/include/bluetooth 
+C_INCLUDES = -I/home/jychoi/wifiAccess/ubertooth/ubertooth-2015-10-R1/host/libubertooth/src -I/usr/include/libusb-1.0 -I/usr/local/include -I/usr/include/bluetooth 
 
